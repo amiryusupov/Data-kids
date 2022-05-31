@@ -648,7 +648,7 @@ function Main() {
                     </span>
                 </div>
                 <div className="map-iframe">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10041.860393774312!2d60.60349581488036!3d41.55922395122031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc99bb51d3df1%3A0x8fe79cbcf464fa6a!2sData%20learning%20centre!5e0!3m2!1sru!2s!4v1591542976104!5m2!1sru!2s" frameBorder="0" allowFullScreen="" aria-hidden="false" tabIndex="0"> </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10041.860393774312!2d60.60349581488036!3d41.55922395122031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc99bb51d3df1%3A0x8fe79cbcf464fa6a!2sData%20learning%20centre!5e0!3m2!1sru!2s!4v1591542976104!5m2!1sru!2s" frameBorder="0" allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
                 </div>
                 <div className="map-card">
                     <div className="container">

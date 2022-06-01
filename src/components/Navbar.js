@@ -45,9 +45,9 @@ function Navbar() {
             <div className="navbar__location">
               <i className="fa fa-map-marker fa-3x" aria-hidden="true"></i>
               <div className="navbar__location-text">
-                <span>Xorazm viloyati, Urganch shahar</span>
-                <span>V.Fayozova, 3-uy</span>
-                <span>Ish vaqtlari 9:00 - 19:00</span>
+                <span>{lang === "uz" ? "Xorazm viloyati, Urganch shahar" : "Хорезмская область, город Ургенч"}</span>
+                <span>{lang === "uz" ? "V.Fayozova, 3-uy" : "В.Файозова, 3 дом"}</span>
+                <span>{lang === "uz" ? "Ish vaqtlari 9:00 - 19:00" : "Время работы с 9:00 до 19:00"}</span>
               </div>
             </div>
             <div className="navbar__contact">

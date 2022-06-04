@@ -19,6 +19,9 @@ ul li {
   margin: 0 auto;
   padding: 0 20px;
 }
+html {
+  scroll-behavior: smooth;
+}
 .button {
     position: relative;
     border-radius: 5px;
@@ -197,7 +200,7 @@ ul li {
       top: 0;
       width: 100%;
       background-color: $navbar-bg-color;
-      padding: 0 0 21px 0;
+      padding: 7px 0;
       box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.14);
       z-index: 2;
       @media screen and (max-width: 600px) {
@@ -221,7 +224,6 @@ ul li {
         @media screen and (max-width: 600px) {
           @include d-flex(flex-start, center, column, unset);
         }
-        margin-top: 25px;
         .navbar__nav-li {
           &:not(:last-child) {
             @media screen and (max-width: 600px) {
@@ -266,7 +268,6 @@ ul li {
           font-family: $main-font;
           font-size: 20px;
           font-weight: 500;
-          margin-top: 16px;
           color: $black-color;
         }
         select {
@@ -1568,18 +1569,30 @@ ul li {
         font-family: $main-font;
         line-height: 125%;
         color: $black-color;
+        margin-top: 20px;
+      }
+      .map-card-a {
+        width: 100%;
+        font-family: $main-font;
+        line-height: 125%;
+        a {
+          text-decoration: none;
+          color: $black-color;
+        }
       }
       .map-card-text-bold {
         font-family: $main-font;
         font-weight: bold;
         color: $black-color;
+        text-decoration: none;
       }
       .map-card-text {
         .map-card-p {
           font-family: $main-font;
           line-height: 125%;
           color: $black-color;
-          margin: 0 0 20px 0;
+          text-decoration: none;
+          padding-bottom: 20px;
           .map-card-text-bold {
             font-weight: bold;
           }

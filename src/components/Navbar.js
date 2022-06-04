@@ -68,14 +68,14 @@ function Navbar() {
           <div className="navbar__nav-row">
             <ul className="navbar__nav-ul">
               <li className="navbar__nav-li">
-                <Link className="navbar__nav-text">
+                <Link to="#main" className="navbar__nav-text">
                   {lang === "uz" ? "Kirish" : "Введение"}
                 </Link>
               </li>
               <li className="navbar__nav-li">
-                <Link className="navbar__nav-text">
+                <a href="#yo'nalishlar" className="navbar__nav-text">
                   {lang === "uz" ? "Yo'nalishlar" : "Направления"}
-                </Link>
+                </a>
               </li>
               <li className="navbar__nav-li">
                 <Link className="navbar__nav-text">

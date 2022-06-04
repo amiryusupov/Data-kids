@@ -313,7 +313,7 @@ function Main() {
     const lang = useSelector(state => state.lang.lang)
     return (
         <>
-            <div className="main">
+            <div className="main" id="main">
             <div className="container">
                 <div className="main__row">
                     <div className="main__text">
@@ -403,7 +403,7 @@ function Main() {
             </div>
             <div className="direction">
                 <div className="container">
-                    <span className="direction-title">
+                    <span className="direction-title" id="yo'nalishlar">
                         {lang === "uz" ? "Yo'nalishlar" : "Направления"}
                     </span>
                     <div className="direction__robot">
@@ -656,25 +656,25 @@ function Main() {
                         <div className="map-card-row">
                             <i className="fa fa-map-marker fa-3x" aria-hidden="true"></i>
                             <div className="map-card-text">
-                                <p className="map-card-p">Xorazm viloyati, Urganch shahar
+                                <Link to={{ pathname: "https://www.google.com/maps?ll=41.559897,60.607934&z=15&t=m&hl=ru&gl=US&mapclient=embed&cid=10369429002411899498" }} target="_blank" className="map-card-p">Xorazm viloyati, Urganch shahar
                                     V.Fayozova, 3-uy
-                                </p>
+                                </Link>
                                 <p className="map-card-p">Ish vaqti <span
                                     className="map-card-text-bold">9:00 - 19:00</span></p>
                             </div>
                         </div>
                         <div className="map-card-row">
                             <i className="fa fa-phone fa-3x" aria-hidden="true"></i>
-                            <p className="map-card-text-bold">+99862-227-72-22</p>
+                            <a href="tel:+998622277222" className="map-card-text-bold">+99862-227-72-22</a>
                         </div>
                         <div className="map-card-row">
                             <i className="fa fa-envelope fa-3x" aria-hidden="true"></i>
-                            <p className="map-card-p">dataunionuz@gmail.com</p>
+                            <p className="map-card-a"><Link to={{ pathname: "https://mail.google.com/mail/u/0/#search/dataunionuz%40gmail.com" }} target="_blank">dataunionuz@gmail.com</Link></p>
                         </div>
                         <div className="map__image-link">
                             <Link to={{ pathname: "https://www.instagram.com/data_learning_centre/" }} target="_blank"><img src={instagram_img} className="map-card-icon" alt="Instagram"/></Link>
-                            <Link to={{ pathname: "/https://facebook.com/" }} target="_blank"><img src={facebook_img} className="map-card-icon" alt="Facebook"/></Link>
-                            <Link to={{ pathname: "/https://www.youtube.com/channel/UCiW3qlI3WWth77AeudQgVGw?view_as=subscriber/" }} target="_blank"><img src={youtube_img} className="map-card-icon" alt="Youtube"/></Link>
+                            <Link to={{ pathname: "https://facebook.com/" }} target="_blank"><img src={facebook_img} className="map-card-icon" alt="Facebook"/></Link>
+                            <Link to={{ pathname: "https://www.youtube.com/channel/UCiW3qlI3WWth77AeudQgVGw?view_as=subscriber/" }} target="_blank"><img src={youtube_img} className="map-card-icon" alt="Youtube"/></Link>
                         </div>
                     </div>
                 </div>

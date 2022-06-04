@@ -98,8 +98,8 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-            <div className="navbar__lang">
-              <div className="navbar__lang-text">
+             <div className="navbar__lang">
+               <div className="navbar__lang-text">
                 {lang === "uz" ? "Til :" : "Язык :"}
               </div>
               <select onChange={handleLangChange}>

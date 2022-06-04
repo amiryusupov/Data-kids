@@ -1619,3 +1619,183 @@ ul li {
 }
 // Map - end
 // Main - END
+
+// Footer - start
+.footer {
+  background-color: $footer-bg-color;
+  margin: 15px 0 0;
+  &__row {
+    width: 100%;
+    @include d-flex(space-between, space-between, column, wrap);
+    padding-top: 20px;
+    .footer__top {
+      @include d-flex(center, space-between, row , wrap);
+
+      &-about {
+        width: 35%;
+        @include d-flex(flex-start, center, column, unset);
+        margin-right: 50px;
+        @media screen and (max-width: 1050px) {
+          margin-right: 25px;
+        }
+        @media screen and (max-width: 540px) {
+          width: 100%;
+        }
+        img {
+          width: 100px;
+          height: 100px;
+          margin-bottom: 25px;
+        }
+        .footer__top-desc {
+          width: 62%;
+          font-family: $main-font;
+          font-size: 13px;
+          font-weight: 500;
+          color: $black-color;
+          @media screen and (max-width: 1050px) {
+            width: 100%;
+          }
+        }
+      }
+
+      &-text {
+        width: 60%;
+        @include d-flex(flex-start, space-between, row, wrap);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid $footer-text-color;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+        }
+
+        .footer__top-right {
+          @include d-flex(flex-start, space-between, column, unset);
+          .footer__top-title {
+            font-family: $main-font;
+            font-size: 20px;
+            font-weight: 600;
+            color: $black-color;
+            margin-bottom: 15px;
+          }
+          .footer__top-span {
+            font-family: $main-font;
+            font-size: 16px;
+            line-height: 200%;
+            font-weight: 500;
+            color: $footer-text-color;
+          }
+        }
+      }
+    }
+    .footer__bottom {
+      @include d-flex(flex-start, space-between, row, wrap-reverse);
+      margin-top: 40px;
+
+      &-copy {
+        width: 35%;
+        @include d-flex(flex-start, flex-start, column, unset);
+        margin-right: 50px;
+        @media screen and (min-width: 840px) and (max-width: 1050px){
+          margin-right: 40px;
+        }
+        @media screen and (max-width: 840px) {
+          width: 100%;
+          @include d-flex(center, center, column, unset);
+          margin-top: 20px;
+          margin-right: auto;
+        }
+        span {
+          font-family: $main-font;
+          font-size: 14px;
+          font-weight: 600;
+          color: $footer-text-color;
+        }
+      }
+      &-social {
+        width: 60%;
+        @include d-flex(flex-start, space-between, row, wrap);
+        flex: 1 1 auto;
+        .footer__bottom-map {
+          @include d-flex(flex-start, center, column, unset);
+          width: 40%;
+          @media screen and (max-width: 400px) {
+            width: auto;
+            margin-bottom: 10px;
+          }
+          span {
+            width: 100%;
+            font-family: $main-font;
+            font-size: 16px;
+            font-weight: 600;
+            color: $black-color;
+          }
+          @media screen and (max-width: 1020px) {
+            margin-bottom: 20px;
+          }
+        }
+        .footer__bottom-social-apps {
+          @include d-flex(flex-start, center, column, unset);
+          span {
+            font-family: $main-font;
+            font-size: 16px;
+            font-weight: 600;
+            color: $black-color;
+            margin-bottom: 5px;
+          }
+          @media screen and (max-width: 400px) {
+            margin-bottom: 20px;
+          }
+          .footer__bottom-social-img {
+            @include d-flex(center, center, row, unset);
+            img {
+              width: 45px;
+              height: 40px;
+              object-fit: scale-down;
+            }
+            .footer__bottom-app-tel {
+              width: 34px;
+              margin: 0 4px;
+            }
+          }
+        }
+          .footer__bottom-social-num {
+            @include d-flex(flex-start, center, column, unset);
+            @media screen and (max-width: 620px) {
+              margin-bottom: 20px;
+            }
+              span, a {
+                font-family: $main-font;
+                font-size: 16px;
+                font-weight: 600;
+                color: $black-color;
+              }
+          }
+      }
+    }
+  }
+  .footer__created {
+    @include d-flex(center, center, row, unset);
+    border-top: 1px solid $footer-text-color;
+    background-color: #222222;
+    margin-top: 20px;
+    padding: 10px 0;
+    span {
+      font-family: $main-font;
+      font-size: 16px;
+      font-weight: 400;
+      color: $white-color;
+      a {
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 500;
+        color: $white-color;
+        text-decoration: none;
+        transition: all 0.3s;
+        &:hover {
+          color: $course__item_div-num;
+        }
+      }
+    }
+  }
+}
+// Footer - end

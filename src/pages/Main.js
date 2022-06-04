@@ -673,8 +673,8 @@ function Main() {
                         </div>
                         <div className="map__image-link">
                             <Link to={{ pathname: "https://www.instagram.com/data_learning_centre/" }} target="_blank"><img src={instagram_img} className="map-card-icon" alt="Instagram"/></Link>
-                            <Link to={"https://facebook.com"}><img src={facebook_img} className="map-card-icon" alt="Facebook"/></Link>
-                            <Link to={"https://www.youtube.com/channel/UCiW3qlI3WWth77AeudQgVGw?view_as=subscriber"}><img src={youtube_img} className="map-card-icon" alt="Youtube"/></Link>
+                            <Link to={{ pathname: "/https://facebook.com/" }} target="_blank"><img src={facebook_img} className="map-card-icon" alt="Facebook"/></Link>
+                            <Link to={{ pathname: "/https://www.youtube.com/channel/UCiW3qlI3WWth77AeudQgVGw?view_as=subscriber/" }} target="_blank"><img src={youtube_img} className="map-card-icon" alt="Youtube"/></Link>
                         </div>
                     </div>
                 </div>

@@ -194,6 +194,7 @@ html {
     }
   }
   .navbar__nav {
+    margin-top: 15px;
     transition: all 0.4s;
     &.sticky {
       position: fixed;
@@ -203,6 +204,7 @@ html {
       padding: 7px 0;
       box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.14);
       z-index: 2;
+      margin-top: 0;
       @media screen and (max-width: 600px) {
         display: none;
       }
@@ -1498,7 +1500,7 @@ html {
     position: absolute;
     z-index: 1;
     left: 7%;
-    top: 37%;
+    top: 32%;
     width: 520px;
     height: 440px;
     background-color: #FFFFFF;
@@ -1701,8 +1703,11 @@ html {
       }
     }
     .footer__bottom {
-      @include d-flex(flex-start, space-between, row, wrap-reverse);
+      @include d-flex(flex-start, space-between, row, unset);
       margin-top: 40px;
+      @media screen and (max-width: 840px) {
+        flex-wrap: wrap-reverse;
+      }
 
       &-copy {
         width: 35%;

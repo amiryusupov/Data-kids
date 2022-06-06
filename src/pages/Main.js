@@ -401,9 +401,9 @@ function Main() {
                     </div>
                 </div>
             </div>
-            <div className="direction">
+            <div className="direction"  id="yo'nalishlar">
                 <div className="container">
-                    <span className="direction-title" id="yo'nalishlar">
+                    <span className="direction-title">
                         {lang === "uz" ? "Yo'nalishlar" : "Направления"}
                     </span>
                     <div className="direction__robot">

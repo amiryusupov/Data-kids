@@ -91,7 +91,7 @@ function Footer() {
                 {
                     id: 4,
                     name_uz: "Data soft",
-                    name_ru: "Веб-программирование",
+                    name_ru: "Data soft",
                 },
             ],
         },

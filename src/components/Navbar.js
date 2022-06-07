@@ -84,7 +84,7 @@ function Navbar() {
               </li>
               <li className="navbar__nav-li">
                 <Link className="navbar__nav-text">
-                  {lang === "uz" ? "Galereya" : "Галерея"}
+                  {lang === "uz" ? "Rasmlar" : "Галерея"}
                 </Link>
               </li>
               <li className="navbar__nav-li">

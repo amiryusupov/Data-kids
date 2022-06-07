@@ -5,9 +5,6 @@ import routes from "./components/routes";
 import { Switch, Route, Redirect } from "react-router-dom"
 import './assets/style/style.scss'
 
-window.addEventListener('DOMContentLoaded', (event) => {
-	console.log('DOM fully loaded and parsed');
-});
 
 
 function App() {

@@ -29,18 +29,19 @@ html {
     cursor: pointer;
     border: none;
     background: transparent;
+    text-decoration: none;
 
     &:focus {
       outline: none;
     }
     &::before {
+      content: '';
       width: 100%;
-      height: 54px;
+      height: 52px;
       position: absolute;
       top: 0;
       left: 0;
       border-radius: 5px;
-      content: '';
       background: $course__item_div-num;
       -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
       clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
@@ -724,7 +725,7 @@ html {
         position: absolute;
         max-width: 0;
         box-sizing: content-box;
-        border-top: 200px solid $direction__scratch-shape;
+        border-top: 200px solid $triangle-color;
         border-bottom: 200px solid orangered;
         border-right: 200px solid transparent;
         border-left: 200px solid transparent;
@@ -733,7 +734,7 @@ html {
         );
         border-radius: 50%;
         @media screen and (min-width: 880px) and (max-width: 1215px) {
-          border-top: 175px solid $direction__scratch-shape;
+          border-top: 175px solid $triangle-color;
           border-bottom: 175px solid orangered;
           border-right: 175px solid transparent;
           border-left: 175px solid transparent;
@@ -1254,7 +1255,7 @@ html {
       .direction__web-shape3 {
         width: 60%;
         height: 195px;
-        background-color: #0050f5;
+        background-color: $triangle-color;
         @media screen and (min-width: 1200px) and (max-width: 1400px) {
           width: 55%;
           height: 165px;
@@ -1475,12 +1476,171 @@ html {
 
 // Direction - end
 
+// Detail - start
+.detail {
+  .detail__row {
+    width: 100%;
+    @include d-flex(center, flex-start, row, unset);
+    margin-top: 40px;
+
+    .detail__text {
+      flex: 1;
+      @include d-flex(flex-start, center, column, unset);
+      margin-right: 10px;
+      @media screen and (max-width: 880px) {
+        width: 100%;
+        margin-right: 0;
+      }
+      &-title {
+        font-family: $main-font;
+        font-size: 36px;
+        font-weight: 600;
+        color: $black-color;
+        margin-bottom: 10px;
+        margin-left: 48px;
+        @media screen and (min-width: 390px) and (max-width: 1000px) {
+          font-size: 34px;
+        }
+        @media screen and (min-width: 300px) and (max-width: 390px) {
+          font-size: 32px;
+          margin-left: 0;
+        }
+        @media screen and (max-width: 300px) {
+          font-size: 30px;
+          margin-left: 0;
+        }
+      }
+      &-desc {
+        &-row {
+          @include d-flex(center, flex-start, row, unset);
+          column-gap: 10px;
+          margin: 15px 0;
+          img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            @media screen and (min-width: 390px) and (max-width: 1000px) {
+              width: 37px;
+              height: 37px;
+            }
+            @media screen and (min-width: 350px) and (max-width: 390px) {
+              width: 30px;
+              height: 30px;
+            }
+            @media screen and (max-width: 350px) {
+              display: none;
+            }
+          }
+          .detail__text-desc-content {
+            position: relative;
+            font-family: $main-font;
+            font-size: 20px;
+            font-weight: 600;
+            color: $black-color;
+            padding-left: 20px;
+            @media screen and (min-width: 390px) and (max-width: 1000px) {
+              font-size: 18px;
+            }
+            @media screen and (max-width: 390px) {
+              font-size: 16px;
+            }
+            .detail__text-desc-red {
+              color: $red-color;
+            }
+            &:before {
+              content: '';
+              position: absolute;
+              width: 10px;
+              left: 0;
+              top: 50%;
+              height: 10px;
+              transform: translateY(-50%);
+              background-color: $black-color;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+    .detail__img {
+      @include d-flex(center, center, column-reverse, unset);
+      flex: 1;
+      width: 50%;
+      min-height: auto;
+      @media screen and (max-width: 880px) {
+        display: none;
+      }
+      .detail__img1 {
+        @include d-flex(flex-start, flex-start, row, unset);
+        width: 100%;
+        min-height: auto;
+        img {
+          width: 50%;
+          height: 307px;
+          object-fit: cover;
+          @media screen and (min-width: 880px) and (max-width:1215px) {
+            height: 280px;
+          }
+        }
+      }
+      .detail__shape1 {
+        padding: 0;
+        position: absolute;
+        max-width: 0;
+        box-sizing: content-box;
+        border-top: 180px solid $triangle-color;
+        border-bottom: 180px solid $black-color;
+        border-right: 180px solid transparent;
+        border-left: 180px solid transparent;
+        transform: rotate(
+                        -45deg
+        );
+        border-radius: 50%;
+        @media screen and (min-width: 880px) and (max-width: 1215px) {
+          border-top: 160px solid $triangle-color;
+          border-bottom: 160px solid $black-color;
+          border-right: 160px solid transparent;
+          border-left: 160px solid transparent;
+        }
+        @media screen and (max-width: 880px) {
+          display: none;
+        }
+        .detail__shape2 {
+          position: absolute;
+          right: -100px;
+          bottom: -100px;
+          max-width: 0;
+          box-sizing: content-box;
+          border-top: 100px solid $white-color;
+          border-bottom: 100px solid transparent;
+          border-right: 100px solid transparent;
+          border-left: 100px solid transparent;
+          border-radius: 50%;
+        }
+      }
+      .detail__img2 {
+        @include d-flex(flex-end, flex-end, row, unset);
+        width: 100%;
+        img {
+          width: 50%;
+          height: 306px;
+          object-fit: cover;
+          @media screen and (min-width: 880px) and (max-width: 1215px) {
+            height: 280px;
+          }
+        }
+      }
+    }
+  }
+}
+// Detail - end
+
 // Map - start
 .map {
   width: 100%;
   height: 100%;
   position: relative;
-  margin-top: 60px;
+  margin-top: 50px;
   &-title {
     font-family: $main-font;
     font-size: 70px;

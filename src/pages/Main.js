@@ -15,6 +15,16 @@ import android__img3 from '../assets/img/android__img3.jpg';
 import instagram_img from '../assets/img/instagram_img.svg';
 import facebook_img from '../assets/img/facebook_img.svg';
 import youtube_img from '../assets/img/youtube_img.svg';
+import detail__img1 from '../assets/img/detail-img1.png';
+import detail__img2 from '../assets/img/detail-img2.png';
+import detail__img3 from '../assets/img/detail-img3.png';
+import detail__img4 from '../assets/img/detail-img4.png';
+import detail__img5 from '../assets/img/detail-img5.png';
+import detail__img6 from '../assets/img/detail-img6.png';
+import detail__img7 from '../assets/img/detail-img7.png';
+import detail__img8 from '../assets/img/detail-img8.png';
+import detail__img9 from '../assets/img/detail-img1.jpg';
+import detail__img10 from '../assets/img/detail-img2.jpg';
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 
@@ -412,7 +422,7 @@ function Main() {
                                 <span className="direction__robot-title">{lang === "uz" ? "Robototexnika" : "Робототехника"}</span>
                                 <span className="direction__robot-text">{lang === "uz" ? "kursi" : "курс"}</span>
                                 <span className="direction__robot-desc">{lang === "uz" ? "Robototexnika kelajakning eng istiqbolli sohalaridan biridir. U avtomatlashtirish va texnik tizimlarni yaratish bilan shug'ullanadi va elektronika, mexanika, dasturlash va matematikaning sintezidir. Zamonaviy bolalar buni oson va ishtiyoq bilan o'rganadilar. Ular interaktivlikni yaxshi ko'radilar va fanga katta qiziqish bildiradilar. Bola zamonaviy texnologiyalardan foydalangan holda murakkab muammolarni hal qilishni o'rganadi." : "Робототехника – одно из самых перспективных направлений будущего. Он занимается созданием автоматики и технических систем и представляет собой синтез электроники, механики, программирования и математики. Современные дети учатся этому легко и с азартом. Они любят интерактивность и проявляют большой интерес к науке. Ребенок учится решать сложные задачи с использованием современных технологий."}</span>
-                                <button className="direction__robot-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></button>
+                                <Link to={"/robototexnika"} className="direction__robot-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></Link>
                             </div>
                             <div className="direction__robot-img">
                                 <img src={robot_img} alt=""/>
@@ -637,6 +647,60 @@ function Main() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="detail">
+                <div className="container">
+                    <div className="detail__row">
+                        <div className="detail__text">
+                            <div className="detail__text-title">
+                                <span>Nega aynan biz?</span>
+                            </div>
+                            <div className="detail__text-desc">
+                                <div className="detail__text-desc-row">
+                                    <img src={detail__img1} alt=""/>
+                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">noldan</span> boshlab o'rgatiladi</span> : <span>Уроки преподаются с <span className="detail__text-desc-red">нуля</span></span>};</span>
+                                </div>
+                                <div className="detail__text-desc-row">
+                                    <img src={detail__img2} alt=""/>
+                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslarni <span className="detail__text-desc-red">tajribaga </span>mutaxassislar olib borishadi</span> : <span>Занятия проводят <span className="detail__text-desc-red">опытные</span> специалисты</span>};</span>
+                                </div>
+                                <div className="detail__text-desc-row">
+                                    <img src={detail__img3} alt=""/>
+                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Har bir kurs davomiyligi <span className="detail__text-desc-red">2-9 oy</span></span> : <span>Продолжительность каждого курса <span className="detail__text-desc-red">2-9 месяцев</span></span>};</span>
+                                </div>
+                                <div className="detail__text-desc-row">
+                                    <img src={detail__img4} alt=""/>
+                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar haftada <span className="detail__text-desc-red">3 kun, 3 soatdan</span></span> : <span>Занятия <span className="detail__text-desc-red">3 дня по 3 часа</span>в неделю</span>};</span>
+                                </div>
+                                <div className="detail__text-desc-row">
+                                    <img src={detail__img5} alt=""/>
+                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Guruhga <span className="detail__text-desc-red">10 nafar</span> qatnashuvchi qabul qilinadi</span> : <span>В группу будут допущены <span className="detail__text-desc-red">10 участников</span></span>};</span>
+                                </div>
+                                <div className="detail__text-desc-row">
+                                    <img src={detail__img6} alt=""/>
+                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">kompyuterlar</span> bilan jihozlangan xonada bo'lib o'tadi</span> : <span>Занятия проходят в помещении, оборудованном <span className="detail__text-desc-red">компьютерами</span></span>};</span>
+                                </div>
+                                <div className="detail__text-desc-row">
+                                    <img src={detail__img7} alt=""/>
+                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Dars davomida <span className="detail__text-desc-red">o'quv qurollari</span> va <span className="detail__text-desc-red">kofe-choy</span> bepul beriladi</span> : <span><span className="detail__text-desc-red">Учебные пособия, кофе и чай </span>предоставляются бесплатно во время курса.</span>};</span>
+                                </div>
+                                <div className="detail__text-desc-row">
+                                    <img src={detail__img8} alt=""/>
+                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Kurs yakunida <span className="detail__text-desc-red">sertifikat</span> beriladi</span> : <span>По окончанию курса выдается <span className="detail__text-desc-red">сертификат</span></span>};</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="detail__img">
+                                <div className="detail__img1">
+                                    <img src={detail__img10} alt=""/>
+                                </div>
+                                <div className="detail__shape1">
+                                    <div className="detail__shape2"></div>
+                                </div>
+                            <div className="detail__img2"><img src={detail__img9} alt=""/></div>
                         </div>
                     </div>
                 </div>

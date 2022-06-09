@@ -1872,7 +1872,7 @@ html {
       &-copy {
         width: 35%;
         @include d-flex(flex-start, flex-start, column, unset);
-        margin-right: 50px;
+        margin-right: 70px;
         @media screen and (min-width: 840px) and (max-width: 1050px){
           margin-right: 40px;
         }
@@ -1977,3 +1977,127 @@ html {
   }
 }
 // Footer - end
+
+// Robot - start
+.robot {
+  .robot__row {
+    @include d-flex(flex-start, center, column, unset);
+    margin-top: 40px;
+    @media screen and (max-width: 880px) {
+      margin-top: 15px;
+    }
+    .robot__text {
+      width: 100%;
+      @include d-flex(flex-start, space-between, row, unset);
+      position: relative;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $footer-text-color;
+      &-title {
+        width: 67%;
+        font-family: $main-font;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 130%;
+        color: $black-color;
+        @media screen and (min-width: 1035px) and (max-width: 1125px) {
+          font-size: 55px;
+        }
+        @media screen and (min-width: 880px) and (max-width: 1035px) {
+          font-size: 45px;
+        }
+        @media screen and (min-width: 470px) and (max-width: 880px) {
+          font-size: 35px;
+          width: 100%;
+        }
+        @media screen and (min-width: 400px) and (max-width: 470px) {
+          font-size: 30px;
+          width: 100%;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 25px;
+          width: 100%;
+        }
+      }
+      &-shape {
+        position: absolute;
+        right: 0;
+        top: 0;
+        max-width: 200px;
+        border-right: $black-color solid 140px;
+        border-top: $robot-shape2 solid 140px;
+        @media screen and (max-width: 880px) {
+          display: none;
+        }
+      }
+    }
+    .robot__desc {
+      width: 100%;
+      @include d-flex(flex-start, space-between, row, unset);
+      position: relative;
+      @media screen and (max-width: 880px) {
+        @include d-flex(flex-start, center, column, unset);
+      }
+      &-row {
+        @include d-flex(center, center, column, unset);
+        position: relative;
+        width: 20%;
+        margin-top: 40px;
+        @media screen and (max-width: 880px) {
+          @include d-flex(flex-start, center, column, unset);
+          width: 100%;
+        }
+        &:not(:last-child) {
+          margin-right: 100px;
+          @media screen and (min-width: 1050px) and (max-width: 1200px) {
+            margin-right: 70px;
+          }
+          @media screen and (min-width: 880px) and (max-width: 1050px) {
+            margin-right: 20px;
+          }
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: -45px;
+          right: 60%;
+          border-right: $robot-shape2 solid 30px;
+          border-top: 30px solid transparent;
+          transform: rotate(45deg);
+          @media screen and (max-width: 880px) {
+            right: 98.4%;
+            top: 7%;
+            border-right: $robot-shape2 solid 20px;
+            border-top: 20px solid transparent;
+            transform: rotate(-45deg);
+          }
+        }
+        .robot__desc-title {
+          font-family: $main-font;
+          font-size: 20px;
+          font-weight: 600;
+          color: $black-color;
+          margin-bottom: 15px;
+          @media screen and (min-width: 400px) and (max-width: 880px) {
+            margin-left: 20px;
+            margin-top: 2px;
+          }
+          @media screen and (max-width: 400px) {
+            font-size: 18px;
+            margin-left: 20px;
+            margin-top: 2px;
+          }
+        }
+        .robot__desc-text {
+          font-family: $main-font;
+          font-size: 15px;
+          font-weight: 400;
+          color: $black-color;
+          @media screen and (max-width: 400px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+// Robot - end

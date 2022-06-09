@@ -26,7 +26,7 @@ function App() {
 					<Redirect to="/404" />
 				</Switch>
 			</div>
-			<Footer />
+			<Footer  />
 		</>
     );
 }

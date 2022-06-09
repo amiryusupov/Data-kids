@@ -1,326 +1,54 @@
 import React from 'react';
-import main__img1 from '../assets/img/main__img1.jpg';
-import main__img2 from '../assets/img/main__img2.jpg';
-import robot_img from '../assets/img/robot-img.jpg';
-import scratch__img1 from '../assets/img/scratch__img1.jpg';
-import scratch__img2 from '../assets/img/scratch__img2.jpg';
-import scratch__img3 from '../assets/img/scratch__img3.jpg';
-import game__img1 from '../assets/img/games__img1.png';
-import game__img2 from '../assets/img/games__img2.png';
-import game__img3 from '../assets/img/games__img3.png';
-import web__img1 from '../assets/img/web__img1.jpg';
-import android__img1 from '../assets/img/android__img1.png';
-import android__img2 from '../assets/img/android__img2.png';
-import android__img3 from '../assets/img/android__img3.jpg';
-import instagram_img from '../assets/img/instagram_img.svg';
-import facebook_img from '../assets/img/facebook_img.svg';
-import youtube_img from '../assets/img/youtube_img.svg';
-import detail__img1 from '../assets/img/detail-img1.png';
-import detail__img2 from '../assets/img/detail-img2.png';
-import detail__img3 from '../assets/img/detail-img3.png';
-import detail__img4 from '../assets/img/detail-img4.png';
-import detail__img5 from '../assets/img/detail-img5.png';
-import detail__img6 from '../assets/img/detail-img6.png';
-import detail__img7 from '../assets/img/detail-img7.png';
-import detail__img8 from '../assets/img/detail-img8.png';
-import detail__img9 from '../assets/img/detail-img1.jpg';
-import detail__img10 from '../assets/img/detail-img2.jpg';
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-
-let data = [
-     // 0
-    [
-        {
-            id:1,
-            name_uz: "Robototexnika | 9 oy",
-            name_ru: "Робототехника | 9 месяцев"
-        },
-        {
-            id:2,
-            name_uz: "Scratch | 3 oy",
-            name_ru: "Scratch | 3 месяца"
-        },
-    ],
-    // 1
-    [
-        {
-            id:3,
-            name_uz: "Kompyuter savodxonligi | 2 oy",
-            name_ru: "Компьютерная грамотность | 2 месяца"
-        },
-    ],
-    // 2
-    [
-            {
-                id:4,
-                name_uz: "Mobil o'yin yaratish | 3 oy",
-                name_ru: "Создание мобильной игры | 3 месяца"
-            },
-            {
-                id:5,
-                name_uz: "Video montaj | 3 oy",
-                name_ru: "Монтаж видео | 3 месяца"
-            },
-        ],
-    // 3
-    [
-        {
-            id:6,
-            name_uz: "Web dasturlash | 3 oy",
-            name_ru: "Веб программирование | 3 месяца"
-        },
-        {
-            id:7,
-            name_uz: "Android dasturlash | 3 oy",
-            name_ru: "Андроид-программирование | 3 месяца"
-        }
-    ],
-]
-let item = [
-    // 0
-    [
-        {
-            id: 1,
-            name_uz: "1 - bosqich | 1 oy",
-            name_ru: "1 - этап | 1 месяц",
-            child : [
-                {
-                    id:1,
-                    detail_item_uz: "Robototexnika asoslari",
-                    detail_item_ru: "Основы робототехники",
-                },
-                {
-                    id:2,
-                    detail_item_uz: "Lego mexanikasi bilan ishlash",
-                    detail_item_ru: "Работа с Лего механикой",
-                },
-                {
-                    id:3,
-                    detail_item_uz: "Lego Mindstorm EV3",
-                    detail_item_ru: "Лего Mindstorm EV3",
-                }
-            ]
-        },
-        {
-            id: 2,
-            name_uz: "2 - bosqich | 6 oy",
-            name_ru: "2 - этап | 6 месяц",
-            child: [
-                {
-                    id:1,
-                    detail_item_uz: "Elektron va elektronika asoslari",
-                    detail_item_ru: "Основы электроники и электроники",
-                },
-                {
-                    id:2,
-                    detail_item_uz: "Mikrokontroller bilan ishlash",
-                    detail_item_ru: "Работа с микроконтроллерами",
-                },
-                {
-                    id:3,
-                    detail_item_uz: "Arduino kursi",
-                    detail_item_ru: "Курс ардуино",
-                }
-            ]
-        },
-        {
-            id: 3,
-            name_uz: "3 - bosqich | 2 oy",
-            name_ru: "3 - этап | 2 месяц",
-            child: [
-                {
-                    id:1,
-                    detail_item_uz: "3D modellashtirish",
-                    detail_item_ru: "3D моделирование",
-                },
-                {
-                    id:2,
-                    detail_item_uz: "Murakkab mexanik modellarni ishlab chiqish",
-                    detail_item_ru: "Разработка сложных механических моделей",
-                },
-                {
-                    id:3,
-                    detail_item_uz: "Dasturlash kursi",
-                    detail_item_ru: "Курс программирования",
-                }
-            ]
-        },
-    ],
-    // 1
-    [
-        {
-            id: 1,
-            name_uz: "1 - bosqich | 2 oy",
-            name_ru: "1 - этап | 2 месяц",
-            child : [
-                {
-                    id:1,
-                    detail_item_uz: "Scratch dasturi interfeysi",
-                    detail_item_ru: "Scratch интерфейс программного обеспечения",
-                },
-                {
-                    id:2,
-                    detail_item_uz: "Scratch muxitida ishni boshlash",
-                    detail_item_ru: "Начните работу в среде нуля",
-                },
-                {
-                    id:3,
-                    detail_item_uz: "Scratch dasturini asosiy skriptlari",
-                    detail_item_ru: "Базовые скрипты программы Scratch",
-                }
-            ]
-        },
-        {
-            id: 2,
-            name_uz: "2 - bosqich | 2 oy",
-            name_ru: "2 - этап | 2 месяц",
-            child : [
-                {
-                    id:1,
-                    detail_item_uz: "Bir nechta obyektlar bilan ishlash. Ularning ishini sinxronlashtirish",
-                    detail_item_ru: "Работа с несколькими объектами. Синхронизируйте их работу",
-                },
-                {
-                    id:2,
-                    detail_item_uz: "Mini-o'yinlarni yaratishda Scratch dasturidan foydalanish",
-                    detail_item_ru: "Использование Scratch для создания мини-игр",
-                },
-                {
-                    id:3,
-                    detail_item_uz: "Ijodiy loyihalarni ishlab chiqish",
-                    detail_item_ru: "Разработка творческих проектов",
-                }
-            ]
-        },
-    ],
-    // 2
-    [
-        {
-            id: 1,
-            name_uz: "1 - bosqich | 1 oy",
-            name_ru: "1 - этап | 1 месяц",
-            child : [
-                {
-                    id:1,
-                    detail_item_uz: "Buildbox dasturi imkoniyatlari",
-                    detail_item_ru: "Варианты программы Buildbox",
-                },
-                {
-                    id:2,
-                    detail_item_uz: "Buildbox yordamchi vositalari bilan ishlash",
-                    detail_item_ru: "Работа с утилитами Buildbox",
-                },
-                {
-                    id:3,
-                    detail_item_uz: "Buildbox dasturida o'yin yaratish",
-                    detail_item_ru: "Создать игру в Buildbox",
-                }
-            ]
-        },
-        {
-            id: 2,
-            name_uz: "2 - bosqich | 2 oy",
-            name_ru: "2 - этап | 2 месяц",
-            child : [
-                {
-                    id:1,
-                    detail_item_uz: " O'yinni APK format qilish",
-                    detail_item_ru: "Отформатируйте игру APK",
-                },
-                {
-                    id:2,
-                    detail_item_uz: "Blender dasturi bilan tanishing",
-                    detail_item_ru: "Знакомство с программой Blender",
-                },
-                {
-                    id:3,
-                    detail_item_uz: "O'yinni Google Play-ga joylash",
-                    detail_item_ru: "Загрузите игру в Google Play",
-                }
-            ]
-        }
-    ],
-    // 3
-    [
-        {
-            id:1,
-            detail_item_uz: "Dasturlash asoslari",
-            detail_item_ru: "Основы программирования",
-        },
-        {
-            id:2,
-            detail_item_uz: "Web saytlar qurilish jarayoni",
-            detail_item_ru: "Процесс создания сайта",
-        },
-        {
-            id:3,
-            detail_item_uz: "HTML & CSS",
-            detail_item_ru: "HTML & CSS",
-        },
-        {
-            id:4,
-            detail_item_uz: "Sayt sxemasini qurish",
-            detail_item_ru: "Составьте схему сайта",
-        },
-        {
-            id:5,
-            detail_item_uz: "Saytning ko'rinishini qilishda yangi texnologiyalardan foydalanish",
-            detail_item_ru: "Использование новых технологий в дизайне сайта",
-        },
-        {
-            id:6,
-            detail_item_uz: "Javascript, Jquery",
-            detail_item_ru: "Javascript, Jquery",
-        },
-        {
-            id:7,
-            detail_item_uz: "Real proektlar ustida ishlash",
-            detail_item_ru: "Работа над реальными проектами",
-        },
-        {
-            id:8,
-            detail_item_uz: "Jamoa bo'lib ishlash qoidalari",
-            detail_item_ru: "Правила работы в команде",
-        },
-    ],
-    // 4
-    [
-        {
-            id:1,
-            detail_item_uz: "Dasturlash asoslari",
-            detail_item_ru: "Основы программирования",
-        },
-        {
-            id:2,
-            detail_item_uz: "AndroidStudio'da ishlash",
-            detail_item_ru: "Работать в AndroidStudio",
-        },
-        {
-            id:3,
-            detail_item_uz: "Dastur dizaynini yasash",
-            detail_item_ru: "Создание дизайна программы",
-        },
-        {
-            id:4,
-            detail_item_uz: "Java dasturlash tili Java, OOP",
-            detail_item_ru: "Язык программирования Java, ООП",
-        },
-        {
-            id:5,
-            detail_item_uz: "Real proektlar ustida ishlash",
-            detail_item_ru: "Работа над реальными проектами",
-        },
-        {
-            id:6,
-            detail_item_uz: "Jamoa bo'lib ishlash",
-            detail_item_ru: "Работы в команде",
-        },
-    ]
-]
-
+import {images} from "../helpers/images";
+import {data} from "../helpers/data";
+import {item} from "../helpers/data";
+// let detail = [
+//     {
+//         id:1,
+//         img: images.detail__img1,
+//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">noldan</span> boshlab o'rgatiladi</span> : <span>Уроки преподаются с <span className="detail__text-desc-red">нуля</span></span>};</span> ,
+//     },
+//     {
+//         id:2,
+//         img: images.detail__img2,
+//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslarni <span className="detail__text-desc-red">tajribaga </span>mutaxassislar olib borishadi</span> : <span>Занятия проводят <span className="detail__text-desc-red">опытные</span> специалисты</span>};</span> ,
+//     },
+//     {
+//         id:3,
+//         img: images.detail__img3,
+//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Har bir kurs davomiyligi <span className="detail__text-desc-red">2-9 oy</span></span> : <span>Продолжительность каждого курса <span className="detail__text-desc-red">2-9 месяцев</span></span>};</span> ,
+//     },
+//     {
+//         id:4,
+//         img: images.detail__img4,
+//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar haftada <span className="detail__text-desc-red">3 kun, 3 soatdan</span></span> : <span>Занятия <span className="detail__text-desc-red">3 дня по 3 часа</span>в неделю</span>};</span>,
+//     },
+//     {
+//         id:5,
+//         img: images.detail__img5,
+//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Guruhga <span className="detail__text-desc-red">10 nafar</span> qatnashuvchi qabul qilinadi</span> : <span>В группу будут допущены <span className="detail__text-desc-red">10 участников</span></span>};</span>,
+//     },
+//     {
+//         id:6,
+//         img: images.detail__img6,
+//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">kompyuterlar</span> bilan jihozlangan xonada bo'lib o'tadi</span> : <span>Занятия проходят в помещении, оборудованном <span className="detail__text-desc-red">компьютерами</span></span>};</span>,
+//     },
+//     {
+//         id:7,
+//         img: images.detail__img7,
+//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Dars davomida <span className="detail__text-desc-red">o'quv qurollari</span> va <span className="detail__text-desc-red">kofe-choy</span> bepul beriladi</span> : <span><span className="detail__text-desc-red">Учебные пособия, кофе и чай </span>предоставляются бесплатно во время курса.</span>};</span>,
+//     },
+//     {
+//         id:8,
+//         img: images.detail__img8,
+//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Kurs yakunida <span className="detail__text-desc-red">sertifikat</span> beriladi</span> : <span>По окончанию курса выдается <span className="detail__text-desc-red">сертификат</span></span>};</span>,
+//     },
+//
+// ]
 function Main() {
-    const lang = useSelector(state => state.lang.lang)
+    let lang = useSelector(state => state.lang.lang)
     return (
         <>
             <div className="main" id="main">
@@ -333,13 +61,13 @@ function Main() {
                     </div>
                     <div className="main__img">
                         <div className="main__img1">
-                            <img src={main__img1} alt=""/>
+                            <img src={images.main__img1} alt=""/>
                         </div>
                         <div className="line-circle-1">
                             <div className="line-circle-2"></div>
                         </div>
                         <div className="main__img2">
-                            <img src={main__img2} alt=""/>
+                            <img src={images.main__img2} alt=""/>
                         </div>
                     </div>
                 </div>
@@ -425,7 +153,7 @@ function Main() {
                                 <Link to={"/robototexnika"} className="direction__robot-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></Link>
                             </div>
                             <div className="direction__robot-img">
-                                <img src={robot_img} alt=""/>
+                                <img src={images.robot_img} alt=""/>
                             </div>
                         </div>
                         <div className="direction__robot-detail">
@@ -461,14 +189,14 @@ function Main() {
                         <div className="direction__scratch-items">
                             <div className="direction__scratch-img">
                                 <div className="direction__scratch-img1">
-                                    <img src={scratch__img1} alt=""/>
-                                    <img src={scratch__img3} alt=""/>
+                                    <img src={images.scratch__img1} alt=""/>
+                                    <img src={images.scratch__img3} alt=""/>
                                 </div>
                                     <div className="direction__scratch-shape1">
                                         <div className="direction__scratch-shape2"></div>
                                     </div>
                                 <div className="direction__scratch-img3">
-                                    <img src={scratch__img2} alt=""/>
+                                    <img src={images.scratch__img2} alt=""/>
                                 </div>
                             </div>
                             <div className="direction__scratch-text">
@@ -547,12 +275,12 @@ function Main() {
                                     })}
                                 </div>
                                 <div className="direction__game-detail-content-img">
-                                    <img src={game__img2} alt=""/>
-                                    <img src={game__img1} alt=""/>
+                                    <img src={images.game__img2} alt=""/>
+                                    <img src={images.game__img1} alt=""/>
                                 </div>
                             </div>
                             <div className="direction__game-detail-img">
-                                <img src={game__img3} alt=""/>
+                                <img src={images.game__img3} alt=""/>
                             </div>
                         </div>
                     </div>
@@ -587,7 +315,7 @@ function Main() {
                             <button className="direction__scratch-text-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></button>
                         </div>
                         <div className="direction__web-img">
-                            <img src={web__img1} alt=""/>
+                            <img src={images.web__img1} alt=""/>
                             <div className="direction__web-shapes">
                                 <div className="direction__web-shape1"></div>
                                 <div className="direction__web-shape2">
@@ -611,8 +339,8 @@ function Main() {
                                 <span className="direction__android-desc">{lang === "uz" ? "Android dasturlash o'z android ilovalarini yaratishni maqsad qilgan bolalar uchun juda qulay yo'nalish hisobladi. Mobil dasturlash sohasi xozirgi kunning eng muhim sohalaridan biri. Bu sohani o'rganish orqali hozirda mobil qurilmalarga dastur yaratish imkoniga ega bo'lasiz." : "Андроид программирование считается очень удобным направлением для детей, стремящихся создавать свои собственные приложения для Android. Сфера мобильного программирования на сегодняшний день является одной из самых важных сфер. Изучив эту область, вы теперь сможете создавать приложения для мобильных устройств."}</span>
                             </div>
                             <div className="direction__android-text-img">
-                                <img src={android__img1} alt=""/>
-                                <img src={android__img2} alt=""/>
+                                <img src={images.android__img1} alt=""/>
+                                <img src={images.android__img2} alt=""/>
                             </div>
                             <div className="direction__android-text-detail">
                                 <div className="direction__android-text-detail-month">
@@ -631,7 +359,7 @@ function Main() {
                         </div>
                         <div className="direction__android-img">
                             <div className="direction__android-imgs">
-                                <img src={android__img3} alt=""/>
+                                <img src={images.android__img3} alt=""/>
                             </div>
                             <div className="direction__android-shape">
                                 <div className="direction__android-shape1"></div>
@@ -660,47 +388,47 @@ function Main() {
                             </div>
                             <div className="detail__text-desc">
                                 <div className="detail__text-desc-row">
-                                    <img src={detail__img1} alt=""/>
+                                    <img src={images.detail__img1} alt=""/>
                                     <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">noldan</span> boshlab o'rgatiladi</span> : <span>Уроки преподаются с <span className="detail__text-desc-red">нуля</span></span>};</span>
                                 </div>
                                 <div className="detail__text-desc-row">
-                                    <img src={detail__img2} alt=""/>
+                                    <img src={images.detail__img2} alt=""/>
                                     <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslarni <span className="detail__text-desc-red">tajribaga </span>mutaxassislar olib borishadi</span> : <span>Занятия проводят <span className="detail__text-desc-red">опытные</span> специалисты</span>};</span>
                                 </div>
                                 <div className="detail__text-desc-row">
-                                    <img src={detail__img3} alt=""/>
+                                    <img src={images.detail__img3} alt=""/>
                                     <span className="detail__text-desc-content">{lang === "uz" ? <span>Har bir kurs davomiyligi <span className="detail__text-desc-red">2-9 oy</span></span> : <span>Продолжительность каждого курса <span className="detail__text-desc-red">2-9 месяцев</span></span>};</span>
                                 </div>
                                 <div className="detail__text-desc-row">
-                                    <img src={detail__img4} alt=""/>
+                                    <img src={images.detail__img4} alt=""/>
                                     <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar haftada <span className="detail__text-desc-red">3 kun, 3 soatdan</span></span> : <span>Занятия <span className="detail__text-desc-red">3 дня по 3 часа</span>в неделю</span>};</span>
                                 </div>
-                                <div className="detail__text-desc-row">
-                                    <img src={detail__img5} alt=""/>
+                                <div className="detail__text-desc-row" >
+                                    <img src={images.detail__img5} alt=""/>
                                     <span className="detail__text-desc-content">{lang === "uz" ? <span>Guruhga <span className="detail__text-desc-red">10 nafar</span> qatnashuvchi qabul qilinadi</span> : <span>В группу будут допущены <span className="detail__text-desc-red">10 участников</span></span>};</span>
                                 </div>
                                 <div className="detail__text-desc-row">
-                                    <img src={detail__img6} alt=""/>
+                                    <img src={images.detail__img6} alt=""/>
                                     <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">kompyuterlar</span> bilan jihozlangan xonada bo'lib o'tadi</span> : <span>Занятия проходят в помещении, оборудованном <span className="detail__text-desc-red">компьютерами</span></span>};</span>
                                 </div>
                                 <div className="detail__text-desc-row">
-                                    <img src={detail__img7} alt=""/>
+                                    <img src={images.detail__img7} alt=""/>
                                     <span className="detail__text-desc-content">{lang === "uz" ? <span>Dars davomida <span className="detail__text-desc-red">o'quv qurollari</span> va <span className="detail__text-desc-red">kofe-choy</span> bepul beriladi</span> : <span><span className="detail__text-desc-red">Учебные пособия, кофе и чай </span>предоставляются бесплатно во время курса.</span>};</span>
                                 </div>
                                 <div className="detail__text-desc-row">
-                                    <img src={detail__img8} alt=""/>
+                                    <img src={images.detail__img8} alt=""/>
                                     <span className="detail__text-desc-content">{lang === "uz" ? <span>Kurs yakunida <span className="detail__text-desc-red">sertifikat</span> beriladi</span> : <span>По окончанию курса выдается <span className="detail__text-desc-red">сертификат</span></span>};</span>
                                 </div>
                             </div>
                         </div>
                         <div className="detail__img">
                                 <div className="detail__img1">
-                                    <img src={detail__img10} alt=""/>
+                                    <img src={images.detail__img10} alt=""/>
                                 </div>
                                 <div className="detail__shape1">
                                     <div className="detail__shape2"></div>
                                 </div>
-                            <div className="detail__img2"><img src={detail__img9} alt=""/></div>
+                            <div className="detail__img2"><img src={images.detail__img9} alt=""/></div>
                         </div>
                     </div>
                 </div>
@@ -736,9 +464,9 @@ function Main() {
                             <p className="map-card-a"><Link to={{ pathname: "https://mail.google.com/mail/u/0/#search/dataunionuz%40gmail.com" }} target="_blank">dataunionuz@gmail.com</Link></p>
                         </div>
                         <div className="map__image-link">
-                            <Link to={{ pathname: "https://www.instagram.com/data_learning_centre/" }} target="_blank"><img src={instagram_img} className="map-card-icon" alt="Instagram"/></Link>
-                            <Link to={{ pathname: "https://facebook.com/" }} target="_blank"><img src={facebook_img} className="map-card-icon" alt="Facebook"/></Link>
-                            <Link to={{ pathname: "https://www.youtube.com/channel/UCiW3qlI3WWth77AeudQgVGw?view_as=subscriber/" }} target="_blank"><img src={youtube_img} className="map-card-icon" alt="Youtube"/></Link>
+                            <Link to={{ pathname: "https://www.instagram.com/data_learning_centre/" }} target="_blank"><img src={images.instagram_img} className="map-card-icon" alt="Instagram"/></Link>
+                            <Link to={{ pathname: "https://facebook.com/" }} target="_blank"><img src={images.facebook_img} className="map-card-icon" alt="Facebook"/></Link>
+                            <Link to={{ pathname: "https://www.youtube.com/channel/UCiW3qlI3WWth77AeudQgVGw?view_as=subscriber/" }} target="_blank"><img src={images.youtube_img} className="map-card-icon" alt="Youtube"/></Link>
                         </div>
                     </div>
                 </div>

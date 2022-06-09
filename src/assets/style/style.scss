@@ -471,7 +471,7 @@ html {
             margin-bottom: 25px;
             .course__item_div-num {
               font-family: $main-font;
-              padding: 12px 20px;
+              padding: 10px 20px;
               background-color: $course__item_div-num;
               border-radius: 50%;
               font-weight: 600;
@@ -482,7 +482,7 @@ html {
                 font-size: 23px;
               }
               @media screen and (max-width: 460px) {
-                padding: 10px 20px;
+                padding: 12px 20px;
                 font-size: 21px;
               }
             }

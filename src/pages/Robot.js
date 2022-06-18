@@ -11,7 +11,7 @@ function Robot() {
                 <div className="robot__row">
                     <div className="robot__text">
                         <span className="robot__text-title">
-                            { lang === "uz" ? "Kurs davomida quyidagilarga erishiladi:" : "В ходе курса будет достигнуто следующее:" }
+                            { lang === "uz" ? "Kurs davomida quyлхidagilarga erishiladi:" : "В ходе курса будет достигнуто следующее:" }
                         </span>
                         <div className="robot__text-shape"></div>
                     </div>

@@ -2225,3 +2225,9 @@ html {
   }
 }
 // Robot - end
+
+// Game - start
+.game__row {
+  @include d-flex(center, center)
+}
+// Game - end

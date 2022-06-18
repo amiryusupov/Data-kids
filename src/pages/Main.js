@@ -4,58 +4,58 @@ import {Link} from "react-router-dom";
 import {images} from "../helpers/images";
 import {data} from "../helpers/data";
 import {item} from "../helpers/data";
-// let detail = [
-//     {
-//         id:1,
-//         img: images.detail__img1,
-//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">noldan</span> boshlab o'rgatiladi</span> : <span>Уроки преподаются с <span className="detail__text-desc-red">нуля</span></span>};</span> ,
-//     },
-//     {
-//         id:2,
-//         img: images.detail__img2,
-//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslarni <span className="detail__text-desc-red">tajribaga </span>mutaxassislar olib borishadi</span> : <span>Занятия проводят <span className="detail__text-desc-red">опытные</span> специалисты</span>};</span> ,
-//     },
-//     {
-//         id:3,
-//         img: images.detail__img3,
-//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Har bir kurs davomiyligi <span className="detail__text-desc-red">2-9 oy</span></span> : <span>Продолжительность каждого курса <span className="detail__text-desc-red">2-9 месяцев</span></span>};</span> ,
-//     },
-//     {
-//         id:4,
-//         img: images.detail__img4,
-//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar haftada <span className="detail__text-desc-red">3 kun, 3 soatdan</span></span> : <span>Занятия <span className="detail__text-desc-red">3 дня по 3 часа</span>в неделю</span>};</span>,
-//     },
-//     {
-//         id:5,
-//         img: images.detail__img5,
-//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Guruhga <span className="detail__text-desc-red">10 nafar</span> qatnashuvchi qabul qilinadi</span> : <span>В группу будут допущены <span className="detail__text-desc-red">10 участников</span></span>};</span>,
-//     },
-//     {
-//         id:6,
-//         img: images.detail__img6,
-//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">kompyuterlar</span> bilan jihozlangan xonada bo'lib o'tadi</span> : <span>Занятия проходят в помещении, оборудованном <span className="detail__text-desc-red">компьютерами</span></span>};</span>,
-//     },
-//     {
-//         id:7,
-//         img: images.detail__img7,
-//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Dars davomida <span className="detail__text-desc-red">o'quv qurollari</span> va <span className="detail__text-desc-red">kofe-choy</span> bepul beriladi</span> : <span><span className="detail__text-desc-red">Учебные пособия, кофе и чай </span>предоставляются бесплатно во время курса.</span>};</span>,
-//     },
-//     {
-//         id:8,
-//         img: images.detail__img8,
-//         text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Kurs yakunida <span className="detail__text-desc-red">sertifikat</span> beriladi</span> : <span>По окончанию курса выдается <span className="detail__text-desc-red">сертификат</span></span>};</span>,
-//     },
-//
-// ]
 function Main() {
     let lang = useSelector(state => state.lang.lang)
+    let detail = [
+    {
+        id:1,
+        img: images.detail__img1,
+        text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">noldan</span> boshlab o'rgatiladi</span> : <span>Уроки преподаются с <span className="detail__text-desc-red">нуля</span></span>};</span> ,
+    },
+    {
+        id:2,
+        img: images.detail__img2,
+        text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslarni <span className="detail__text-desc-red">tajribaga </span>mutaxassislar olib borishadi</span> : <span>Занятия проводят <span className="detail__text-desc-red">опытные</span> специалисты</span>};</span> ,
+    },
+    {
+        id:3,
+        img: images.detail__img3,
+        text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Har bir kurs davomiyligi <span className="detail__text-desc-red">2-9 oy</span></span> : <span>Продолжительность каждого курса <span className="detail__text-desc-red">2-9 месяцев</span></span>};</span> ,
+    },
+    {
+        id:4,
+        img: images.detail__img4,
+        text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar haftada <span className="detail__text-desc-red">3 kun, 3 soatdan</span></span> : <span>Занятия <span className="detail__text-desc-red">3 дня по 3 часа</span>в неделю</span>};</span>,
+    },
+    {
+        id:5,
+        img: images.detail__img5,
+        text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Guruhga <span className="detail__text-desc-red">10 nafar</span> qatnashuvchi qabul qilinadi</span> : <span>В группу будут допущены <span className="detail__text-desc-red">10 участников</span></span>};</span>,
+    },
+    {
+        id:6,
+        img: images.detail__img6,
+        text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">kompyuterlar</span> bilan jihozlangan xonada bo'lib o'tadi</span> : <span>Занятия проходят в помещении, оборудованном <span className="detail__text-desc-red">компьютерами</span></span>};</span>,
+    },
+    {
+        id:7,
+        img: images.detail__img7,
+        text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Dars davomida <span className="detail__text-desc-red">o'quv qurollari</span> va <span className="detail__text-desc-red">kofe-choy</span> bepul beriladi</span> : <span><span className="detail__text-desc-red">Учебные пособия, кофе и чай </span>предоставляются бесплатно во время курса.</span>};</span>,
+    },
+    {
+        id:8,
+        img: images.detail__img8,
+        text: <span className="detail__text-desc-content">{lang === "uz" ? <span>Kurs yakunida <span className="detail__text-desc-red">sertifikat</span> beriladi</span> : <span>По окончанию курса выдается <span className="detail__text-desc-red">сертификат</span></span>};</span>,
+    },
+
+]
     return (
         <>
             <div className="main" id="main">
             <div className="container">
                 <div className="main__row">
                     <div className="main__text">
-                        <span className="main__text-item1" >{lang === "uz" ? "\"DATA\" o'quv markazimizga xush kelibsiz!" : "Добро пожаловать в наш учебный центр DATA!"}</span>
+                        <span className="main__text-item1" >{lang === "uz" ? "\"DATA Kids\" o'quv markazimizga xush kelibsiz!" : "Добро пожаловать в наш учебный центр DATA!"}</span>
                         <span className="main__text-item2">{lang === "uz" ? "Bizning maqsadimiz - kelajak yoshlarini kashf qilish" : "Наша цель открыть для себя молодежь будущего"}</span>
                         <span className="main__text-item3">{lang === "uz" ? "Biz O‘zbekistonda yangi texnologiyalarni qo‘llash orqali jamiyat taraqqiyotiga hissa qo‘shishni, o‘quvchilarimizga sifatli ta’lim berish, bilim olish uchun ijodiy, zamonaviy va eng qulay muhit yaratish uchun eng tajribali va bilimli o‘qituvchilar bilan hamkorlik qilishni istaymiz!" : "Мы хотим внести свой вклад в развитие общества, используя новые технологии в Узбекистане, сотрудничать с самыми опытными и образованными учителями, чтобы обеспечить нашим ученикам качественное образование, создать творческую, современную и максимально комфортную среду для получения знаний!"}</span>
                     </div>
@@ -245,7 +245,7 @@ function Main() {
                                 <span className="direction__game-title">{lang === "uz" ? "Mobil o'yin yaratish" : "Создание мобильных игр"}</span>
                                 <span className="direction__game-texts">{lang === "uz" ? "kursi" : "курс"}</span>
                                 <span className="direction__game-desc">{lang === "uz" ? "Buildbox dasturi yordamida o'yinlar yaratish juda oson. Dasturlash shart emas. Chegaralar faqat sizning tasavvuringizda bo'lishi mumkin. Uning yordami bilan o'yinlarni bir necha kun yoki hatto bir necha soat ichida loyihalash va qurish mumkin." : "Создавать игры с помощью программы Buildbox очень просто. Программирование не требуется. Границы могут быть только в вашем воображении. С его помощью игры можно разрабатывать и создавать за считанные дни или даже часы."}</span>
-                                <button className="direction__game-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></button>
+                                <Link to={"/mobileGame"} className="direction__game-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></Link>
                             </div>
                             <div className="direction__game-shape">
                                 <div className="direction__game-shape-circle"></div>
@@ -387,38 +387,44 @@ function Main() {
                                 <span>Nega aynan biz?</span>
                             </div>
                             <div className="detail__text-desc">
-                                <div className="detail__text-desc-row">
-                                    <img src={images.detail__img1} alt=""/>
-                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">noldan</span> boshlab o'rgatiladi</span> : <span>Уроки преподаются с <span className="detail__text-desc-red">нуля</span></span>};</span>
-                                </div>
-                                <div className="detail__text-desc-row">
-                                    <img src={images.detail__img2} alt=""/>
-                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslarni <span className="detail__text-desc-red">tajribaga </span>mutaxassislar olib borishadi</span> : <span>Занятия проводят <span className="detail__text-desc-red">опытные</span> специалисты</span>};</span>
-                                </div>
-                                <div className="detail__text-desc-row">
-                                    <img src={images.detail__img3} alt=""/>
-                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Har bir kurs davomiyligi <span className="detail__text-desc-red">2-9 oy</span></span> : <span>Продолжительность каждого курса <span className="detail__text-desc-red">2-9 месяцев</span></span>};</span>
-                                </div>
-                                <div className="detail__text-desc-row">
-                                    <img src={images.detail__img4} alt=""/>
-                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar haftada <span className="detail__text-desc-red">3 kun, 3 soatdan</span></span> : <span>Занятия <span className="detail__text-desc-red">3 дня по 3 часа</span>в неделю</span>};</span>
-                                </div>
-                                <div className="detail__text-desc-row" >
-                                    <img src={images.detail__img5} alt=""/>
-                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Guruhga <span className="detail__text-desc-red">10 nafar</span> qatnashuvchi qabul qilinadi</span> : <span>В группу будут допущены <span className="detail__text-desc-red">10 участников</span></span>};</span>
-                                </div>
-                                <div className="detail__text-desc-row">
-                                    <img src={images.detail__img6} alt=""/>
-                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">kompyuterlar</span> bilan jihozlangan xonada bo'lib o'tadi</span> : <span>Занятия проходят в помещении, оборудованном <span className="detail__text-desc-red">компьютерами</span></span>};</span>
-                                </div>
-                                <div className="detail__text-desc-row">
-                                    <img src={images.detail__img7} alt=""/>
-                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Dars davomida <span className="detail__text-desc-red">o'quv qurollari</span> va <span className="detail__text-desc-red">kofe-choy</span> bepul beriladi</span> : <span><span className="detail__text-desc-red">Учебные пособия, кофе и чай </span>предоставляются бесплатно во время курса.</span>};</span>
-                                </div>
-                                <div className="detail__text-desc-row">
-                                    <img src={images.detail__img8} alt=""/>
-                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Kurs yakunida <span className="detail__text-desc-red">sertifikat</span> beriladi</span> : <span>По окончанию курса выдается <span className="detail__text-desc-red">сертификат</span></span>};</span>
-                                </div>
+                                {
+                                    detail.map((item)=> {
+                                        return (
+                                            <div className="detail__text-desc-row" key={item.id} >
+                                                <img src={item.img} alt=""/>
+                                                <div dangerouslySetInnerHTML={{__html: `${item.text}`}}></div>
+                                            </div>
+                                        )
+                                    })
+                                }
+                                {/*<div className="detail__text-desc-row">*/}
+                                {/*    <img src={images.detail__img2} alt=""/>*/}
+                                {/*    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslarni <span className="detail__text-desc-red">tajribaga </span>mutaxassislar olib borishadi</span> : <span>Занятия проводят <span className="detail__text-desc-red">опытные</span> специалисты</span>};</span>*/}
+                                {/*</div>*/}
+                                {/*<div className="detail__text-desc-row">*/}
+                                {/*    <img src={images.detail__img3} alt=""/>*/}
+                                {/*    <span className="detail__text-desc-content">{lang === "uz" ? <span>Har bir kurs davomiyligi <span className="detail__text-desc-red">2-9 oy</span></span> : <span>Продолжительность каждого курса <span className="detail__text-desc-red">2-9 месяцев</span></span>};</span>*/}
+                                {/*</div>*/}
+                                {/*<div className="detail__text-desc-row">*/}
+                                {/*    <img src={images.detail__img4} alt=""/>*/}
+                                {/*    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar haftada <span className="detail__text-desc-red">3 kun, 3 soatdan</span></span> : <span>Занятия <span className="detail__text-desc-red">3 дня по 3 часа</span>в неделю</span>};</span>*/}
+                                {/*</div>*/}
+                                {/*<div className="detail__text-desc-row" >*/}
+                                {/*    <img src={images.detail__img5} alt=""/>*/}
+                                {/*    <span className="detail__text-desc-content">{lang === "uz" ? <span>Guruhga <span className="detail__text-desc-red">10 nafar</span> qatnashuvchi qabul qilinadi</span> : <span>В группу будут допущены <span className="detail__text-desc-red">10 участников</span></span>};</span>*/}
+                                {/*</div>*/}
+                                {/*<div className="detail__text-desc-row">*/}
+                                {/*    <img src={images.detail__img6} alt=""/>*/}
+                                {/*    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">kompyuterlar</span> bilan jihozlangan xonada bo'lib o'tadi</span> : <span>Занятия проходят в помещении, оборудованном <span className="detail__text-desc-red">компьютерами</span></span>};</span>*/}
+                                {/*</div>*/}
+                                {/*<div className="detail__text-desc-row">*/}
+                                {/*    <img src={images.detail__img7} alt=""/>*/}
+                                {/*    <span className="detail__text-desc-content">{lang === "uz" ? <span>Dars davomida <span className="detail__text-desc-red">o'quv qurollari</span> va <span className="detail__text-desc-red">kofe-choy</span> bepul beriladi</span> : <span><span className="detail__text-desc-red">Учебные пособия, кофе и чай </span>предоставляются бесплатно во время курса.</span>};</span>*/}
+                                {/*</div>*/}
+                                {/*<div className="detail__text-desc-row">*/}
+                                {/*    <img src={images.detail__img8} alt=""/>*/}
+                                {/*    <span className="detail__text-desc-content">{lang === "uz" ? <span>Kurs yakunida <span className="detail__text-desc-red">sertifikat</span> beriladi</span> : <span>По окончанию курса выдается <span className="detail__text-desc-red">сертификат</span></span>};</span>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
                         <div className="detail__img">

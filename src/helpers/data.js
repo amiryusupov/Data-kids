@@ -325,3 +325,34 @@ export let robot = [
         desc_ru: "Помогает развивать мышление при решении логических задач и головоломок, развивает умение искать ответы и делать выводы",
     },
 ]
+export let game = [
+    {
+        id:1,
+        name_uz: "Necha yoshdan o'rgansa bo'ladi",
+        name_ru: "С какого возраста можно учиться",
+        desc_uz: "Mobil o'yin yaratishni 11 yoshdan yuqori bolalar qiyinchiliksiz o'rgansa oladi",
+        desc_ru: "Дети старше 11 лет могут без труда научиться создавать мобильные игры"
+    },
+    {
+        id:2,
+        name_uz: "Boshlashim uchun men superkuchga ega bo'lishim shartmi",
+        name_ru: "Должен ли я иметь сверхдержаву, чтобы начать",
+        desc_uz: "Boshlash uchun superkuchga ega bolishingiz shartmas. Boshlash uchun xoxish bo'lsa yetarli",
+        desc_ru: "Вам не нужно иметь сверхдержаву, чтобы начать. Достаточно, если есть желание начать"
+    },
+    {
+        id:3,
+        name_uz: "Kursni yakunlab men nima olaman?",
+        name_ru: "Что я получу, пройдя курс?",
+        desc_uz: "Kursni yankunlagandan keyin sizda mobil o'yin yaratish imkoniyati bo'ladi. Shu bilanbirga 3D animatsiya olamiga birinchi qadamni qo'yasiz",
+        desc_ru: "После запуска курса у вас будет возможность создать мобильную игру. Таким образом, вы сделаете первый шаг в мир 3D-анимации"
+    },
+    {
+        id:4,
+        name_uz: "Qancha vaqta o'yin yarata olaman",
+        name_ru: "Сколько времени я могу создать игру",
+        desc_uz: "Bu o'yinning imkoniyatlariga bog'lik. Dastur tayyor shablonlaridan foydalanib oddiyroq o'yinni 1 kunda yaratish mumkin.",
+        desc_ru: "Это зависит от возможностей игры. Более простую игру можно создать за 1 день, используя готовые программные шаблоны."
+    },
+
+]

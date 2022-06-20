@@ -214,7 +214,7 @@ html {
       height: 0;
       overflow: hidden;
       &.active {
-        height: 40vh;
+        height: 200px;
       }
     }
     .navbar__nav-row {
@@ -2226,6 +2226,7 @@ html {
 }
 // Robot - end
 
+// Game - start
 // Game - start
 .game__row {
   @include d-flex(center, center, row ,unset);

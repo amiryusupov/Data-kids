@@ -3,8 +3,8 @@ export let data = [
     [
         {
             id:1,
-            name_uz: "Robototexnika | 9 oy",
-            name_ru: "Робототехника | 9 месяцев"
+            name_uz: "Robototexnika | 7 oy",
+            name_ru: "Робототехника | 7 месяцев"
         },
         {
             id:2,
@@ -74,8 +74,8 @@ export let item = [
         },
         {
             id: 2,
-            name_uz: "2 - bosqich | 6 oy",
-            name_ru: "2 - этап | 6 месяц",
+            name_uz: "2 - bosqich | 5 oy",
+            name_ru: "2 - этап | 5 месяц",
             child: [
                 {
                     id:1,
@@ -96,8 +96,8 @@ export let item = [
         },
         {
             id: 3,
-            name_uz: "3 - bosqich | 2 oy",
-            name_ru: "3 - этап | 2 месяц",
+            name_uz: "3 - bosqich | 1 oy",
+            name_ru: "3 - этап | 1 месяц",
             child: [
                 {
                     id:1,

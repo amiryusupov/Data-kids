@@ -2228,6 +2228,6 @@ html {
 
 // Game - start
 .game__row {
-  @include d-flex(center, center)
+  @include d-flex(center, center, row ,unset);
 }
 // Game - end

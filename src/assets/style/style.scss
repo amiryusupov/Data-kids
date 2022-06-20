@@ -867,6 +867,7 @@ html {
         font-family: $main-font;
         font-weight: 600;
         font-size: 70px;
+        word-break: break-all;
         color: $black-color;
         @media screen and (min-width: 880px) and (max-width: 1000px){
           font-size: 65px;
@@ -1081,6 +1082,7 @@ html {
       font-weight: 600;
       font-size: 64px;
       line-height: 130%;
+      word-break: break-all;
       color: $black-color;
       @media screen and (min-width: 500px) and (max-width: 600px) {
         font-size: 59px;
@@ -1284,6 +1286,7 @@ html {
         font-weight: 600;
         font-size: 70px;
         line-height: 100%;
+        word-break: break-all;
         color: $black-color;
         @media screen and (min-width: 1100px) and (max-width: 1270px){
           font-size: 60px

@@ -12,7 +12,7 @@ function Main() {
             <div className="container">
                 <div className="main__row">
                     <div className="main__text">
-                        <span className="main__text-item1" >{lang === "uz" ? "\"DATA Kids\" o'quv markazimizga xush kelibsiz!" : "Добро пожаловать в наш учебный центр DATA!"}</span>
+                        <span className="main__text-item1" >{lang === "uz" ? "\"DATA Kids\" o'quv markazimizga xush kelibsiz!" : "Добро пожаловать в наш учебный центр DATA Kids!"}</span>
                         <span className="main__text-item2">{lang === "uz" ? "Bizning maqsadimiz - kelajak yoshlarini kashf qilish" : "Наша цель открыть для себя молодежь будущего"}</span>
                         <span className="main__text-item3">{lang === "uz" ? "Biz O‘zbekistonda yangi texnologiyalarni qo‘llash orqali jamiyat taraqqiyotiga hissa qo‘shishni, o‘quvchilarimizga sifatli ta’lim berish, bilim olish uchun ijodiy, zamonaviy va eng qulay muhit yaratish uchun eng tajribali va bilimli o‘qituvchilar bilan hamkorlik qilishni istaymiz!" : "Мы хотим внести свой вклад в развитие общества, используя новые технологии в Узбекистане, сотрудничать с самыми опытными и образованными учителями, чтобы обеспечить нашим ученикам качественное образование, создать творческую, современную и максимально комфортную среду для получения знаний!"}</span>
                     </div>

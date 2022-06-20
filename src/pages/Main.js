@@ -387,16 +387,6 @@ function Main() {
                                 <span>Nega aynan biz?</span>
                             </div>
                             <div className="detail__text-desc">
-                                {/*{*/}
-                                {/*    detail.map((item)=> {*/}
-                                {/*        return (*/}
-                                {/*            <div className="detail__text-desc-row" key={item.id} >*/}
-                                {/*                <img src={item.img} alt=""/>*/}
-                                {/*                <div dangerouslySetInnerHTML={{__html: `${item.text}`}}></div>*/}
-                                {/*            </div>*/}
-                                {/*        )*/}
-                                {/*    })*/}
-                                {/*}*/}
                                 <div className="detail__text-desc-row">
                                     <img src={images.detail__img2} alt=""/>
                                     <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslarni <span className="detail__text-desc-red">tajribaga </span>mutaxassislar olib borishadi</span> : <span>Занятия проводят <span className="detail__text-desc-red">опытные</span> специалисты</span>};</span>

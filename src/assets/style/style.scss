@@ -318,6 +318,7 @@ html {
 
         @media screen and (min-width: 880px) and (max-width: 960px) {
           font-size: 60px;
+
         }
         @media screen and (min-width: 390px) and (max-width: 500px) {
           font-size: 50px;
@@ -1666,7 +1667,7 @@ html {
     top: 32%;
     width: 520px;
     height: 440px;
-    background-color: #FFFFFF;
+    background-color: $white-color;
     border-radius: 45px;
     box-shadow: 0 15px 25px -10px rgba(0, 0, 0, .1);
     padding: 35px;
@@ -2232,6 +2233,169 @@ html {
 // Game - start
 // Game - start
 .game__row {
+  width: 100%;
   @include d-flex(center, center, row ,unset);
+  margin-top: 40px;
+  @media screen and (max-width: 500px) {
+    margin-top: 20px;
+  }
+  .game__shape {
+    width: 25%;
+    @include d-flex(flex-start, center, column, unset);
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: 880px) {
+      display: none;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border: 130px solid $course__item_div-num;
+      border-radius: 50%;
+      transform: translate(-65px, 65px);
+      @media screen and (min-width: 0px) and (max-width: 960px) {
+        border: 100px solid $course__item_div-num;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-radius: 50%;
+      border: 80px solid $navbar-color1;
+      transform: translate(-60px, 60px);
+      z-index: 1;
+      @media screen and (min-width: 0px) and (max-width: 960px) {
+        border: 70px solid $navbar-color1;
+      }
+    }
+    &2 {
+      display: flex;
+      width: 195px;
+      height: 530px;
+      background-color: $navbar-color1;
+      @media screen and (min-width: 0px) and (max-width: 960px) {
+        width: 150px;
+        height: 500px;
+      }
+    }
+    &1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-left: 195px solid $navbar-color3;
+      border-bottom: 195px solid transparent;
+      transform: rotate(0deg);
+      @media screen and (min-width: 0px) and (max-width: 960px) {
+        border-left: 150px solid $navbar-color3;
+        border-bottom: 150px solid transparent;
+      }
+    }
+  }
+  .game__text {
+    width: 75%;
+    @include d-flex(flex-start, flex-start, column, unset);
+    @media screen and (max-width: 880px) {
+      width: 100%;
+    }
+    &-title {
+      font-family: $main-font;
+      font-size: 55px;
+      font-weight: 700;
+      color: $main-font;
+      margin-bottom: 30px;
+      line-height: 100%;
+      @media screen and (min-width: 960px) and (max-width: 1030px) {
+        font-size: 50px;
+      }
+      @media screen and (min-width: 740px) and (max-width: 960px) {
+        font-size: 45px;
+      }
+      @media screen and (min-width: 500px) and (max-width: 740px) {
+        font-size: 40px;
+        line-height: 126%;
+      }
+      @media screen and (min-width:400px) and (max-width: 500px) {
+        font-size: 35px;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 28gipx;
+      }
+    }
+    .game__div {
+        border-left: 1px solid $black-color;
+        padding-left: 50px;
+        margin-left: -50px;
+      @media screen and (min-width: 800px) and (max-width: 1030px) {
+        padding-left: 30px;
+        margin-left: -30px;
+      }
+      @media screen and (max-width: 880px) {
+        padding-left: 30px;
+        margin-left: 0;
+      }
+      .game__text-item {
+        @include d-flex(flex-start, center, column, unset);
+        position: relative;
+
+        .game__text-content {
+          font-family: $main-font;
+          font-size: 28px;
+          font-weight: 600;
+          color: $black-color;
+          margin-bottom: 10px;
+          @media screen and (min-width: 740px) and (max-width: 1030px) {
+            font-size: 25px;
+          }
+          @media screen and (min-width: 500px) and (max-width: 740px) {
+            font-size: 23px;
+          }
+          @media screen and (min-width: 400px) and (max-width: 500px) {
+            font-size: 21px;
+          }
+          @media screen and (max-width: 400px) {
+            font-size: 17px;
+          }
+          &:before {
+            content: '';
+            left: -65px;
+            position: absolute;
+            top: 10px;
+            width: 10px;
+            border-left: 25px solid $course__item_div-num;
+            border-bottom: 25px solid transparent;
+            transform: rotate(135deg);
+            @media screen and (min-width: 400px) and (max-width: 1030px) {
+              left: -50px;
+            }
+            @media screen and (max-width: 400px) {
+              left: -45px;
+              border-left: 20px solid $course__item_div-num;
+            border-bottom: 20px solid transparent;
+            }
+          }
+        }
+        .game__text-desc {
+          font-family: $main-font;
+          font-size: 18px;
+          font-weight: 500;
+          color: $black-color;
+          @media screen and (min-width: 400px) and (max-width: 740px) {
+            font-size: 17px;
+          }
+          @media screen and (max-width: 400px) {
+            font-size: 15px;
+          }
+          &:not(&:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
 }
 // Game - end

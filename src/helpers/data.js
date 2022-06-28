@@ -324,19 +324,19 @@ export let robot = [
         desc_uz: "Jamoa bo'lib ishlash maqsadlarga samarali erishish uchun mihimdir. Raqobatbardoshlikni hibsga olgan holda bolaning bilim olishga qiziqishini oshirish orqali yaxshi natijalarga erishamiz",
         desc_ru: "Помогает развивать мышление при решении логических задач и головоломок, развивает умение искать ответы и делать выводы",
     },
-]
+];
 export let game = [
     {
         id:1,
-        name_uz: "Necha yoshdan o'rgansa bo'ladi",
-        name_ru: "С какого возраста можно учиться",
+        name_uz: "Necha yoshdan o'rgansa bo'ladi?",
+        name_ru: "С какого возраста можно учиться?",
         desc_uz: "Mobil o'yin yaratishni 11 yoshdan yuqori bolalar qiyinchiliksiz o'rgansa oladi",
         desc_ru: "Дети старше 11 лет могут без труда научиться создавать мобильные игры"
     },
     {
         id:2,
-        name_uz: "Boshlashim uchun men superkuchga ega bo'lishim shartmi",
-        name_ru: "Должен ли я иметь сверхдержаву, чтобы начать",
+        name_uz: "Boshlashim uchun men superkuchga ega bo'lishim shartmi?",
+        name_ru: "Должен ли я иметь сверхдержаву, чтобы начать?",
         desc_uz: "Boshlash uchun superkuchga ega bolishingiz shartmas. Boshlash uchun xoxish bo'lsa yetarli",
         desc_ru: "Вам не нужно иметь сверхдержаву, чтобы начать. Достаточно, если есть желание начать"
     },
@@ -349,10 +349,10 @@ export let game = [
     },
     {
         id:4,
-        name_uz: "Qancha vaqta o'yin yarata olaman",
-        name_ru: "Сколько времени я могу создать игру",
+        name_uz: "Qancha vaqta o'yin yarata olaman?",
+        name_ru: "Сколько времени я могу создать игру?",
         desc_uz: "Bu o'yinning imkoniyatlariga bog'lik. Dastur tayyor shablonlaridan foydalanib oddiyroq o'yinni 1 kunda yaratish mumkin.",
         desc_ru: "Это зависит от возможностей игры. Более простую игру можно создать за 1 день, используя готовые программные шаблоны."
     },
 
-]
+];

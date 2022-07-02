@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import {robot} from "../helpers/data";
-import teacher_img from "../assets/img/teacher-img4.png";
+import {images} from "../helpers/images";
 
 function Robot() {
     let lang = useSelector(state => state.lang.lang)
@@ -28,7 +28,7 @@ function Robot() {
                 </div>
                 <div className="robot__teach">
                     <div className="robot__teach-img">
-                        <img src={teacher_img} alt=""/>
+                        <img src={images.teacher4} alt=""/>
                         <div className="robot__teach-shape1"></div>
                         <div className="robot__teach-shape2"></div>
                     </div>

@@ -24,6 +24,11 @@ import detail__img7 from '../assets/img/detail-img7.png';
 import detail__img8 from '../assets/img/detail-img8.png';
 import detail__img9 from '../assets/img/detail-img1.jpg';
 import detail__img10 from '../assets/img/detail-img2.jpg';
+import teacher1 from '../assets/img/teacher-img1.png';
+import teacher2 from '../assets/img/teacher-img2.png';
+import teacher3 from '../assets/img/teacher-img3.png';
+import teacher4 from '../assets/img/teacher-img4.png';
+import teacher5 from '../assets/img/teacher-img5.png';
 
 export const images = {
     main__img1,
@@ -52,6 +57,11 @@ export const images = {
     detail__img8,
     detail__img9,
     detail__img10,
+    teacher1,
+    teacher2,
+    teacher3,
+    teacher4,
+    teacher5,
 }
 
-// export default images;
+export default images;

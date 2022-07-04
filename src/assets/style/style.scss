@@ -2324,7 +2324,7 @@ html {
                 font-size: 35px;
             }
             @media screen and (max-width: 400px) {
-                font-size: 30px;
+                font-size: 27px;
             }
         }
         .game__div {
@@ -2399,7 +2399,7 @@ html {
         }
     }
 }
-.game__teacher {
+.game__teacher1 {
     width: 100%;
     @include d-flex(center, center, row, unset);
     margin-top: 60px;
@@ -2407,7 +2407,7 @@ html {
         @include d-flex(center, center, column, unset);
         margin-top: 20px;
     }
-    .game__teacher-img {
+    .game__teacher-img1 {
         @include d-flex(center, flex-start, row, unset);
         position: relative;
         width: 50%;
@@ -2459,7 +2459,7 @@ html {
             }
         }
     }
-    .game__teacher-text {
+    .game__teacher-text1 {
         width: 50%;
         position: relative;
         overflow: hidden;
@@ -2561,6 +2561,187 @@ html {
             @media screen and (max-width: 390px) {
                 font-size: 14px;
                 width: 100%;
+            }
+        }
+    }
+}
+.game__teacher2 {
+    width: 100%;
+    @include d-flex(center, center, row, unset);
+    margin-top: 60px;
+    @media screen and (max-width: 700px) {
+        @include d-flex(center, center, column-reverse, unset);
+        margin-top: 30px;
+    }
+    .game__teacher-text2 {
+        @include d-flex(flex-start, center, column, unset);
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+        height: 554px;
+        text-align: left;
+        @media screen and (min-width: 700px) and (max-width: 800px) {
+            height: 380px;
+            width: 60%;
+        }
+        @media screen and (max-width: 700px) {
+            @include d-flex(center, center, column, unset);
+            text-align: center;
+            width: 100%;
+            height: auto;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            clip-path: circle(60% at 0% 100%);
+            background-color: $course__item_div-num;
+            @media screen and (min-width: 800px) and (max-width: 1000px) {
+                clip-path: circle(50% at 0% 100%);
+            }
+            @media screen and (min-width: 700px) and (max-width: 800px) {
+                clip-path: circle(50% at 0% 100%);
+                width: 150px;
+                height: 150px;
+            }
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+        }
+        .game__teacher-title {
+            font-family: $main-font;
+            font-weight: 600;
+            font-size: 65px;
+            line-height: 130%;
+            @media screen and (min-width: 1145px) and (max-width: 1236px) {
+                font-size: 60px;
+            }
+            @media screen and (min-width: 1000px) and (max-width: 1145px) {
+                font-size: 52px;
+            }
+            @media screen and (min-width: 870px) and (max-width: 1000px) {
+                font-size: 45px;
+            }
+            @media screen and (min-width: 700px) and (max-width: 870px) {
+                font-size: 40px;
+            }
+            @media screen and (min-width: 500px) and (max-width: 700px) {
+                font-size: 50px;
+            }
+            @media screen and (min-width: 390px) and (max-width: 500px) {
+                font-size: 40px;
+            }
+            @media screen and (max-width: 390px) {
+                font-size: 30px;
+            }
+        }
+        .game__teacher-course {
+            font-family: $main-font;
+            font-weight: 600;
+            font-size: 28px;
+            color: $black-color;
+            margin: 20px 0;
+            @media screen and (min-width: 701px) and (max-width: 1000px) {
+                font-size: 23px;
+            }
+            @media screen and (min-width: 390px) and (max-width: 500px) {
+                font-size: 21px;
+                margin: 10px 0;
+            }
+            @media screen and (max-width: 390px) {
+                font-size: 20px;
+                margin: 10px 0;
+            }
+        }
+        .game__teacher-desc {
+            font-family: $main-font;
+            font-weight: 500;
+            font-size: 17px;
+            color: $black-color;
+            width: 80%;
+            @media screen and (min-width: 800px) and (max-width: 1000px) {
+                width: 100%;
+                font-size: 15px;
+            }
+            @media screen and (min-width: 700px) and (max-width: 800px) {
+                font-size: 14px;
+                width: 80%;
+            }
+            @media screen and (min-width: 390px) and (max-width: 500px) {
+                font-size: 15px;
+            }
+            @media screen and (max-width: 390px) {
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+    }
+    .game__teacher-img {
+        @include d-flex(flex-end, flex-end, column, unset);
+        position: relative;
+        width: 50%;
+        @media screen and (min-width: 700px) and (max-width: 800px) {
+            width: 40%;
+        }
+        @media screen and (max-width: 700px) {
+            @include d-flex(center, center, column, unset);
+            width: 100%;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-left: 200px solid $course__item_div-num;
+            border-bottom: 200px solid transparent;
+            transform: rotate(90deg);
+            @media screen and (min-width: 700px) and (max-width: 1000px) {
+                border-left: 120px solid $course__item_div-num;
+                border-bottom: 120px solid transparent;
+            }
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0.5px;
+            right: 0;
+            width: 50%;
+            height: 250px;
+            background-color: $yellow-color;
+            z-index: -1;
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+        }
+        .game_teacher-div2 {
+            width: 554px;
+            height: 554px;
+            @media screen and (min-width: 800px) and (max-width: 1000px) {
+                width: auto;
+                height: 500px;
+            }
+            @media screen and (min-width: 700px) and (max-width: 800px) {
+                width: 310px;
+                height: 400px;
+            }
+            @media screen and (min-width: 500px) and (max-width: 700px) {
+                width: 100%;
+                height: 450px;
+            }
+            @media screen and (max-width: 500px) {
+                width: 100%;
+                height: 400px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
         }
     }

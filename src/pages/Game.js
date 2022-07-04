@@ -35,13 +35,13 @@ function Game() {
                         </div>
                     </div>
                 </div>
-                <div className="game__teacher">
-                    <div className="game__teacher-img">
+                <div className="game__teacher1">
+                    <div className="game__teacher-img1">
                         <div className="game_teacher-div">
                             <img src={images.teacher1} alt=""/>
                         </div>
                     </div>
-                    <div className="game__teacher-text">
+                    <div className="game__teacher-text1">
                         <span className="game__teacher-title">
                             {lang === "uz" ? "Baxtiyor Atajanov" : "Бахтёр Атаджанов"}
                         </span>
@@ -51,6 +51,24 @@ function Game() {
                         <span className="game__teacher-desc">
                             {lang === "uz" ? "Vizual effektlar sohasida 2 yillik tajribaga ega.VFX ustasi, VR texnologiyasi bo'yicha mutaxassis, o'yinni ishlab chiquvchi. Kariyerasi davomida u ko'plab yirik loyihalarda ishtirok etdi.Texnologik malaka-Adobe Premiere Pro, Adobe after Effects, Cinema4D va h.k" : "Имеет 2-летний опыт работы в области визуальных эффектов.Мастер VFX, специалист по технологиям VR, разработчик игр. За свою карьеру он участвовал во многих крупных проектах.Технологическая квалификация-Adobe Premiere Pro, Adobe After Effects, Cinema4D и другие"}
                         </span>
+                    </div>
+                </div>
+                <div className="game__teacher2">
+                    <div className="game__teacher-text2">
+                        <span className="game__teacher-title">
+                            {lang === "uz" ? "Bekzod Abdullayev" : "Бекод Абдуллаев"}
+                        </span>
+                        <span className="game__teacher-course">
+                            {lang === "uz" ? "Mobil o'yin yaratish kursi mentori" : "Ментор курса по созданию мобильных игр"}
+                        </span>
+                        <span className="game__teacher-desc">
+                            {lang === "uz" ? "Sohada 10 yillik tajribaga ega.Texnologik malakasi: Blender, Cinema 4d, After effects, Premiere Pro, Photoshop, Buildbox, Lumion, DaVinci Resolve, Sony vegas" : "Имеет 2-летний опыт работы в области визуальных эффектов.Мастер VFX, специалист по технологиям VR, разработчик игр. За свою карьеру он участвовал во многих крупных проектах.Технологическая квалификация-Adobe Premiere Pro, Adobe After Effects, Cinema4D и другие"}
+                        </span>
+                    </div>
+                    <div className="game__teacher-img">
+                        <div className="game_teacher-div2">
+                            <img src={images.teacher2} alt=""/>
+                        </div>
                     </div>
                 </div>
             </div>

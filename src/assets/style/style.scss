@@ -1993,6 +1993,9 @@ html {
             position: relative;
             padding-bottom: 40px;
             border-bottom: 1px solid $footer-text-color;
+            //@media screen and (max-width: ){
+            //
+            //}
             &-title {
                 width: 67%;
                 font-family: $main-font;

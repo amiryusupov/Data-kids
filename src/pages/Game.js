@@ -38,7 +38,7 @@ function Game() {
                 <div className="game__teacher">
                     <div className="game__teacher-img">
                         <div className="game_teacher-div">
-                            <img src={images.teacher1}/>
+                            <img src={images.teacher1} alt=""/>
                         </div>
                     </div>
                     <div className="game__teacher-text">

@@ -82,6 +82,10 @@ html {
             width: 100%;
             padding: 15px 0;
 
+            @media screen and (max-width: 600px) {
+                padding: 5px 0;
+            }
+
             .navbar__logo {
                 @include d-flex(center, center, row, wrap);
                 text-decoration: none;
@@ -93,7 +97,7 @@ html {
                     margin-right: 15px;
 
                     @media screen and (max-width: 360px) {
-                        font-size: 38px;
+                        font-size: 35px;
                     }
                     @media screen and (min-width: 360px) and (max-width: 860px) {
                         font-size: 45px;
@@ -105,7 +109,7 @@ html {
                     font-family: $main-font;
 
                     @media screen and (max-width: 360px) {
-                        font-size: 40px;
+                        font-size: 35px;
                     }
                     @media screen and (min-width: 360px) and (max-width: 860px) {
                         font-size: 45px;
@@ -189,7 +193,7 @@ html {
                         }
                     }
                     @media screen and (max-width: 360px) {
-                        font-size: 40px;
+                        font-size: 35px;
                     }
                     @media screen and (min-width: 360px) and (max-width: 600px) {
                         font-size: 45px;
@@ -314,20 +318,26 @@ html {
             }
             &-item1 {
                 font-family: $main-font;
-                font-size: 63px;
+                font-size: 60px;
                 font-weight: 600;
                 color: $black-color;
                 line-height: 125%;
                 text-align: left;
 
-                @media screen and (min-width: 880px) and (max-width: 960px) {
-                    font-size: 60px;
+                @media screen and (min-width: 880px) and (max-width: 980px) {
+                    font-size: 54px;
+                }
+                @media screen and (min-width: 500px) and (max-width: 880px) {
+                    font-size: 47px;
                 }
                 @media screen and (min-width: 390px) and (max-width: 500px) {
-                    font-size: 50px;
+                    font-size: 40px;
                 }
-                @media screen and (max-width: 390px) {
+                @media screen and (min-width: 360px) and (max-width: 390px) {
                     font-size: 35px;
+                }
+                @media screen and (max-width: 360px) {
+                    font-size: 30px;
                 }
             }
             &-item2 {
@@ -336,14 +346,15 @@ html {
                 font-weight: 600;
                 color: $black-color;
                 margin: 30px 0;
-                @media screen and (min-width: 500px) and (max-width: 960px) {
-                    font-size: 30px;
-                }
-                @media screen and (min-width: 390px) and (max-width: 500px) {
+                @media screen and (min-width: 500px) and (max-width: 980px) {
                     font-size: 25px;
                 }
+                @media screen and (min-width: 390px) and (max-width: 500px) {
+                    font-size: 23px;
+                }
                 @media screen and (max-width: 390px) {
-                    font-size: 19px;
+                    font-size: 18px;
+                    margin: 15px 0;
                 }
             }
             &-item3 {
@@ -351,8 +362,14 @@ html {
                 font-size: 18px;
                 font-weight: 500;
                 color: $black-color;
-                @media screen and (max-width: 390px) {
+                @media screen and (min-width: 500px) and (max-width: 880px) {
+                    font-size: 17px;
+                }
+                @media screen and (min-width: 390px) and (max-width: 500px) {
                     font-size: 16px;
+                }
+                @media screen and (max-width: 390px) {
+                    font-size: 14px;
                 }
             }
         }
@@ -436,8 +453,12 @@ html {
                 @media screen and (min-width: 460px) and (max-width: 960px) {
                     font-size: 50px;
                 }
-                @media screen and (max-width: 460px) {
+                @media screen and (min-width: 350px) and (max-width: 460px) {
                     font-size: 45px;
+                }
+                @media screen and (max-width: 350px) {
+                    font-size: 35px;
+                    word-break: break-all;
                 }
             }
             &-shape {
@@ -485,7 +506,7 @@ html {
                                 font-size: 23px;
                             }
                             @media screen and (max-width: 460px) {
-                                padding: 12px 20px;
+                                padding: 9px 17px;
                                 font-size: 21px;
                             }
                         }
@@ -498,7 +519,7 @@ html {
                                 font-size: 23px;
                             }
                             @media screen and (max-width: 460px) {
-                                font-size: 21px;
+                                font-size: 20px;
                             }
                         }
                     }
@@ -513,15 +534,15 @@ html {
 .direction-title {
     font-family: $main-font;
     font-weight: 600;
-    font-size: 70px;
+    font-size: 60px;
     @media screen and (min-width: 390px) and (max-width: 500px) {
-        font-size: 60px;
-    }
-    @media screen and (min-width: 320px) and (max-width: 390px) {
         font-size: 50px;
     }
-    @media screen and (max-width: 320px) {
+    @media screen and (min-width: 320px) and (max-width: 390px) {
         font-size: 45px;
+    }
+    @media screen and (max-width: 320px) {
+        font-size: 40px;
     }
 }
 
@@ -543,7 +564,7 @@ html {
             .direction__robot-title {
                 font-family: $main-font;
                 font-weight: 600;
-                font-size: 60px;
+                font-size: 50px;
                 color: $black-color;
                 margin-top: 30px;
                 @media screen and (min-width: 390px) and (max-width: 500px) {
@@ -2747,3 +2768,72 @@ html {
     }
 }
 // Game - end
+// Page not found - start
+.notfound {
+    width: 100%;
+    @include d-flex(center, center, column, unset);
+    .notfound-num {
+        font-family: $main-font;
+        font-size: 150px;
+        font-weight: 600;
+        color: $course__item_div-num;
+        @media screen and (min-width: 400px) and (max-width: 550px) {
+            font-size: 100px;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 80px;
+        }
+    }
+    .notfound-text {
+        font-family: $main-font;
+        font-size: 32px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $black-color;
+        margin-bottom: 30px;
+        text-align: center;
+        @media screen and (min-width: 400px) and (max-width: 550px) {
+            font-size: 26px;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 21px;
+        }
+    }
+    .notfound-desc {
+        width: 60%;
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $black-color;
+        text-align: center;
+        margin-bottom: 15px;
+        @media screen and (min-width: 400px) and (max-width: 550px) {
+            font-size: 15px;
+            width: 90%;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 14px;
+            width: 100%;
+        }
+    }
+    .notfound-link {
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $course__item_div-num;
+        text-align: center;
+        border: 2px solid $course__item_div-num;
+        padding: 5px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+        &:hover {
+            background-color: $course__item_div-num;
+            color: $white-color;
+        }
+    }
+}
+// Page not found - end

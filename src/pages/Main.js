@@ -269,7 +269,7 @@ function Main() {
                                     })
                                 }
                             </div>
-                            <button className="direction__scratch-text-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></button>
+                            <Link to={"/web"} className="direction__scratch-text-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></Link>
                         </div>
                         <div className="direction__web-img">
                             <img src={images.web__img1} alt=""/>

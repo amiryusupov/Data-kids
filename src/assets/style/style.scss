@@ -337,7 +337,7 @@ html {
                     font-size: 35px;
                 }
                 @media screen and (max-width: 360px) {
-                    font-size: 30px;
+                    font-size: 32px;
                 }
             }
             &-item2 {
@@ -457,7 +457,7 @@ html {
                     font-size: 45px;
                 }
                 @media screen and (max-width: 350px) {
-                    font-size: 35px;
+                    font-size: 30px;
                     word-break: break-all;
                 }
             }
@@ -506,7 +506,7 @@ html {
                                 font-size: 23px;
                             }
                             @media screen and (max-width: 460px) {
-                                padding: 9px 17px;
+                                padding: 7px 15px;
                                 font-size: 21px;
                             }
                         }
@@ -655,6 +655,7 @@ html {
                         }
                         @media screen and (max-width: 460px) {
                             font-size: 21px;
+                            padding: 7px 15px;
                         }
                     }
                     .direction__robot-detail-item-content {
@@ -801,7 +802,7 @@ html {
                 font-size: 16px;
                 margin-bottom: 20px;
                 @media screen and (max-width: 390px) {
-                    font-size: 15px;
+                    font-size: 14px;
                 }
             }
             .direction__scratch-detail {
@@ -967,6 +968,7 @@ html {
     }
     &-detail {
         width: 100%;
+        margin-top: 10px;
         @include d-flex(center, center, row, unset);
         &-content {
             @include d-flex(center, center, row, unset);
@@ -981,15 +983,19 @@ html {
                 width: 55%;
                 @include d-flex(center, center, column, wrap);
                 @media screen and (min-width: 1001px) and (max-width: 1170px) {
-                    width: 65%;
-                }
-                @media screen and (max-width: 1000px) {
                     width: 100%;
+                }
+                @media screen and (max-width: 880px) {
+                    width: 100%;
+                    @include d-flex(flex-start, space-between, row, wrap);
                 }
                 .direction__game-detail-content-item {
                     width: 100%;
                     @include d-flex(flex-start, center, column, unset);
                     margin-bottom: 15px;
+                    @media screen and (max-width: 880px) {
+                        width: auto;
+                    }
                     .direction__game-detail-content-month {
                         @include d-flex(center, center, row, unset);
                         margin-bottom: 10px;
@@ -2837,3 +2843,99 @@ html {
     }
 }
 // Page not found - end
+// web - start
+.web__row {
+    @include d-flex(center, center, column, wrap);
+    .web__title {
+        font-family: $main-font;
+        font-weight: 600;
+        font-size: 33px;
+        color: $course__item_div-num;
+        margin: 10px 0;
+        @media screen and (min-width: 700px) and (max-width: 811px) {
+            font-size: 30px;
+            text-align: center;
+        }
+        @media screen and (min-width: 500px) and (max-width: 700px) {
+            font-size: 26px;
+            text-align: center;
+        }
+        @media screen and (min-width: 325px) and (max-width: 500px) {
+            font-size: 24px;
+            text-align: center;
+        }
+        @media screen and (max-width: 325px) {
+            font-size: 22px;
+            text-align: center;
+        }
+    }
+    .web__text {
+        width: 100%;
+        @include d-flex(flex-start, space-between, row, wrap);
+        &-item {
+            @include d-flex(flex-start, center, column, unset);
+            width: 50%;
+            line-height: 130%;
+            margin-bottom: 20px;
+            padding-left: 28px;
+            padding-top: 7px;
+            @media screen and (min-width: 600px) and (max-width: 811px) {
+                padding-left: 30px;
+            }
+            @media screen and (max-width: 600px) {
+                width: 100%;
+                padding-left: 30px;
+            }
+
+            &-title {
+                position: relative;
+                font-family: $main-font;
+                font-size: 25px;
+                font-weight: 600;
+                color: $black-color;
+                margin-bottom: 10px;
+
+                @media screen and (min-width: 400px) and (max-width: 811px) {
+                    font-size: 21px;
+                    margin-bottom: 5px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 19px
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -1px;
+                    left: -40px;
+                    border-right: $robot-shape2 solid 25px;
+                    border-top: 25px solid transparent;
+                    transform: rotate(-45deg);
+                    @media screen and (max-width: 811px) {
+                        top: 0;
+                        border-right: $robot-shape2 solid 20px;
+                        border-top: 20px solid transparent;
+                    }
+                }
+            }
+            &-desc {
+                width: 85%;
+                font-family: $main-font;
+                font-size: 16px;
+                font-weight: 500;
+                color: $black-color;
+
+                @media screen and (min-width: 400px) and (max-width: 811px) {
+                    width: 95%;
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 13px
+                }
+            }
+        }
+    }
+}
+// web - end

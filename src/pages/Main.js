@@ -258,7 +258,7 @@ function Main() {
                                         1
                                     </span>
                                     <span className="direction__web-detail-text">
-                                        {lang === "uz" ? "3 oyga mo'ljallangan kurs davomida" : "в течение 3-х месячного курса"}
+                                        {lang === "uz" ? "4 oyga mo'ljallangan kurs davomida" : "в течение 4-х месячного курса"}
                                     </span>
                                 </div>
                                 {
@@ -344,6 +344,10 @@ function Main() {
                                 <span>Nega aynan biz?</span>
                             </div>
                             <div className="detail__text-desc">
+                                <div className="detail__text-desc-row">
+                                    <img src={images.detail__img1} alt=""/>
+                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar <span className="detail__text-desc-red">noldan</span> boshlab o'rgatiladi</span> : <span>Уроки преподаются с <span className="detail__text-desc-red">нуля</span></span>};</span>
+                                </div>
                                 <div className="detail__text-desc-row">
                                     <img src={images.detail__img2} alt=""/>
                                     <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslarni <span className="detail__text-desc-red">tajribaga </span>mutaxassislar olib borishadi</span> : <span>Занятия проводят <span className="detail__text-desc-red">опытные</span> специалисты</span>};</span>

@@ -37,8 +37,8 @@ export let data = [
     [
         {
             id:6,
-            name_uz: "Web dasturlash | 3 oy",
-            name_ru: "Веб программирование | 3 месяца"
+            name_uz: "Web dasturlash | 4 oy",
+            name_ru: "Веб программирование | 4 месяца"
         },
         {
             id:7,
@@ -356,3 +356,40 @@ export let game = [
     },
 
 ];
+export let web = [
+    {
+        id: 1,
+        title_uz: "Mulokot",
+        title_ru: "Диалог",
+        desc_uz: "Tanishish, mulokot qilish va tinglash orqali jamoadoshlari bilan konstruktiv mulokot o'rnatish, o'z g'oyalarini yakkol ifodalay olishni o'rganadi",
+        desc_ru: "Через знакомство, общение и слушание учится выстраивать конструктивный диалог с товарищами по команде, уметь ярко выражать свои идеи",
+    },
+    {
+        id: 2,
+        title_uz: "Muammolarni xal qila bilish",
+        title_ru: "Уметь решать проблемы",
+        desc_uz: "Murakkab masalalarni qismlarga bo'lib xal qilishni o'rganadi",
+        desc_ru: "Учится решать сложные задачи по частям",
+    },
+    {
+        id: 3,
+        title_uz: "Vazifalarni to'g'ri qo'ya bilish",
+        title_ru: "Уметь правильно ставить задачи",
+        desc_uz: "O'z vazifasining asosiy maqsadini aniqlab olishni o'rganadi",
+        desc_ru: "Учится определять основную цель своей задачи",
+    },
+    {
+        id: 4,
+        title_uz: "Intizom",
+        title_ru: "Дисциплина",
+        desc_uz: "Shaxsiy resurslarni to'g'ri taqsimlash, muddatlar borasida ulgurish",
+        desc_ru: "Правильное распределение личных ресурсов, соблюдение сроков",
+    },
+    {
+        id: 5,
+        title_uz: "Moslashuvchanlik",
+        title_ru: "Гибкость",
+        desc_uz: "Oldingi vazifalar uchun yangicha yondashuvlarni qo'llab, odatiy narsalarni noodatiy tarzda amalga oshirish va vaziyat uchun nostandart yechimlarni yangi sharoitga tezda moshlashishni o'rganishadi",
+        desc_ru: "Они учатся по-новому подходить к поставленным задачам, необычно реализовывать привычные вещи и быстро приспосабливать к новым условиям нестандартные для ситуации решения",
+    },
+]

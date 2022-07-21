@@ -392,4 +392,27 @@ export let web = [
         desc_uz: "Oldingi vazifalar uchun yangicha yondashuvlarni qo'llab, odatiy narsalarni noodatiy tarzda amalga oshirish va vaziyat uchun nostandart yechimlarni yangi sharoitga tezda moshlashishni o'rganishadi",
         desc_ru: "Они учатся по-новому подходить к поставленным задачам, необычно реализовывать привычные вещи и быстро приспосабливать к новым условиям нестандартные для ситуации решения",
     },
+];
+export let web2 = [
+    {
+        id: 0,
+        title_uz: "Dasturlashning asosiy qismlari o'rgatiladi",
+        title_ru: "Основные части программирования преподаются",
+        desc_uz: "Ushbu kurs yosh dasturchilarning bor e'tiborini fantaziyaga, fikrlash doirasini kengaytirishga va dasturlash sohasida ko'nikmalarga ega bo'lishida ulkan hissa qo'shadi. Mazkur kursda bolalarga  ijodiy ishlar qilish mobaynida o'z qobilyatlarini o'sishiga , zamon bilan hamnafas bo'lishida hamda IT sohasiga kirishiga ilk qadam bo'ladi.",
+        desc_ru: "Этот курс вносит огромный вклад в то, что молодые программисты уделяют все свое внимание фантазии, расширению своего мышления и приобретению навыков программирования. Данный курс станет первым шагом в развитии творческих способностей детей , в ногу со временем и вхождения в сферу IT.",
+    },
+    {
+        id: 1,
+        title_uz: "To'g'ri ma'lumot topish",
+        title_ru: "Искать правильной информации",
+        desc_uz: "O'quvchi kurs davomida o'zini muammolarini to'g'ri va aniq ma'lumotlarni qayerdan topishni va to'g'ri qidirishni o'rganadi. Ma'lumotlarni tahlil qilishga layoqatli bo'ladi. Asosiysi dasturlashdagi o'ziga duch kelgan xatoliklarni izlab o'rganishni, yangi narsalarni topishni bemalol uddalaydi.",
+        desc_ru: "На протяжении всего курса студент узнает о своих проблемах, где найти и правильно искать правильную и точную информацию. Он будет способен анализировать данные. Главное, чтобы он мог свободно учиться, находить что-то новое, искать ошибки, с которыми он столкнулся в программировании.",
+    },
+    {
+        id: 2,
+        title_uz: "Dasturlashdagi jarayonlar",
+        title_ru: "Процессы в программировании",
+        desc_uz: "Dasturlash mantiqiy fikrlashga ma'lumotlarni tizimlashga asosiysi jamoa bo'lib ishlashga ko'nikib hamda o'rganib boradi. O'quvchi har bir dars oxirida o'tilgan mavzuga oid kichkina va qiziqarli bo'lgan kichkina sahifaga yasash orqali mavzuni mustahkamlaydi. Darsda raqobat va mulohaza orqali o'z o'zini fikrlash va ko'rsata olish darajasini oshiradi.",
+        desc_ru: "Программирование приучает и обучает логическому мышлению, систематизации информации, командной работе. Ученик укрепляет свою тему, делая ее маленькой и интересной страницей, посвященной теме, упомянутой в конце каждого урока. Повышает уровень умения мыслить и проявлять себя на уроке посредством соревнования и рассуждений.",
+    },
 ]

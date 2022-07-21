@@ -54,7 +54,7 @@ function Navbar() {
               <i className="fa fa-phone fa-3x" aria-hidden="true"></i>
               <div className="navbar__contact-item">
                 <span>+998(99) 759-88-86</span>
-                <a href="tel:+998997598886">Qayta bog'lanaylikmi?</a>
+                <a href="tel:+998997598886">{lang === "uz" ? "Qayta bog'lanaylikmi?" : "Давайте воссоединимся?"}</a>
               </div>
             </div>
             <div className="navbar__burger" onClick={()=> setActiveBtn(!activeBtn)}>

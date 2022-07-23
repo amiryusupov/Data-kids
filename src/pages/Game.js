@@ -67,7 +67,7 @@ function Game() {
                     </div>
                     <div className="game__teacher-img">
                         <div className="game_teacher-div2">
-                            <img src={images.teacher2} alt=""/>
+                            <img src={images.teacher6} alt=""/>
                         </div>
                     </div>
                 </div>

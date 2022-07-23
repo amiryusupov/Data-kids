@@ -67,6 +67,16 @@ function Web() {
                         <div className="web__teach-desc">{lang === "uz" ? "Toshkent axborot texnologiyalari Universiteti 3 kurs talabasi. Web dasturlash yo'nalishida 2 yillik tajribaga ega. Html, Css Bootstrap, Javascript, Jquery, Node.js, Express.js, Typescript, Git, Handlebars dasturlash tillarida ishlay oladi. Onlayn frilans birjalarida faoliyat olib boradi." : "Студент 3 курса Ташкентского университета информационных технологий. Имеет 2-летний опыт работы в области веб-программирования. Html, Css Bootstrap, Javascript, Jquery, Node.DJs, Экспресс.может работать на языках программирования js, Typescript, Git, Handlebars. Работает на биржах фриланса онлайн."}</div>
                     </div>
                 </div>
+                <div className="web__teach2">
+                    <div className="web__teach-img">
+                        <img src={images.teacher6} alt=""/>
+                    </div>
+                    <div className="web__teach-text">
+                        <div className="web__teach-title">{lang === "uz" ? "Xudoshkur Madrimov" : "Худошукур Мадримов"}</div>
+                        <div className="web__teach-content">{lang === "uz" ? "\"Web dasturlash\" kursi mentori" : "Наставник курса по веб-программирования"}</div>
+                        <div className="web__teach-desc">{lang === "uz" ? "Kurs davomida o'quvchi o'z e'tiborini fantaziyaga qaratib, fikrlash doirasini kengayishiga va dasturlash sohasida ko'nikmalarni rivojlantirishga erishadi. Mazkur bolalar ijodiy ishlar qilish mobaynida o'z qobilyatlarini o'sishga, hamda ushbu kurs zamon bilan hamnafas bo'lishida, IT sohasiga kirib kelishga ilk qadam bo'ladi." : "На протяжении всего курса учащийся, концентрируя свое внимание на фантазии, добивается расширения сферы своего мышления и развития навыков в области программирования. Эти дети будут развивать свои способности во время творческой работы, и этот курс станет первым шагом в ногу со временем, чтобы войти в сферу IT."}</div>
+                    </div>
+                </div>
             </div>
         </div>
     );

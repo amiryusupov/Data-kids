@@ -29,6 +29,7 @@ import teacher2 from '../assets/img/teacher-img2.png';
 import teacher3 from '../assets/img/teacher-img3.png';
 import teacher4 from '../assets/img/teacher-img4.png';
 import teacher5 from '../assets/img/teacher-img5.png';
+import teacher6 from '../assets/img/teacher-img6.png';
 import web__img_data1 from '../assets/img/web__img-data1.jpg';
 import web__img_data2 from '../assets/img/web__img-data2.jpg';
 
@@ -65,6 +66,7 @@ export const images = {
     teacher3,
     teacher4,
     teacher5,
+    teacher6,
     web__img_data1,
     web__img_data2,
 }

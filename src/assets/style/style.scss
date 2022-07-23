@@ -454,7 +454,8 @@ html {
                     font-size: 50px;
                 }
                 @media screen and (min-width: 350px) and (max-width: 460px) {
-                    font-size: 45px;
+                    font-size: 35px;
+                    word-break: break-all;
                 }
                 @media screen and (max-width: 350px) {
                     font-size: 30px;

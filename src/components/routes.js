@@ -5,6 +5,7 @@ import Scratch from "../pages/Scratch";
 import Game from "../pages/Game";
 import Web from "../pages/Web";
 import Android from "../pages/Android";
+import Foundation from "../pages/Foundation";
 
 let routes = [
 	{
@@ -39,6 +40,11 @@ let routes = [
 	},
 	{
 		id: 7,
+		path: "/foundation",
+		component: Foundation,
+	},
+	{
+		id: 8,
 		path: "/404",
 		component: PageNotFound,
 	},

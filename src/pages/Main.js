@@ -2,7 +2,7 @@ import React from 'react';
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import {images} from "../helpers/images";
-import {data} from "../helpers/data";
+import {data, foundation} from "../helpers/data";
 import {item} from "../helpers/data";
 function Main() {
     let lang = useSelector(state => state.lang.lang)
@@ -312,7 +312,7 @@ function Main() {
                                     })
                                 }
                             </div>
-                            <div className="direction__android-text-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></div>
+                            <Link to={"/android"} className="direction__android-text-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></Link>
                         </div>
                         <div className="direction__android-img">
                             <div className="direction__android-imgs">
@@ -331,6 +331,42 @@ function Main() {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="direction__foundation">
+                        <div className="direction__foundation-course">
+                            <div className="direction__foundation-texts">
+                                <span className="direction__foundation-title">{lang === "uz" ? "Kompyuter savodxonligi" : "Компьютерная грамотность"}</span>
+                                <span className="direction__foundation-text">{lang === "uz" ? "kursi" : "курс"}</span>
+                                <span className="direction__foundation-desc">{lang === "uz" ? "Kurs davomida o'quvchilar Microsoft office: Word, Excel, Power Point dasturlashida ishlash, tizim aminstratorligi, kompyuterning tuzilishi va unda ishlash asoslari, kabi bilim hamda ko'nikmalarga ega bo'lishadi" : "Робототехника – одно из самых перспективных направлений будущего. Он занимается созданием автоматики и технических систем и представляет собой синтез электроники, механики, программирования и математики. Современные дети учатся этому легко и с азартом. Они любят интерактивность и проявляют большой интерес к науке. Ребенок учится решать сложные задачи с использованием современных технологий."}</span>
+                                <Link to={"/foundation"} className="direction__foundation-btn button"><span>{lang === "uz" ? "Batafsil tanishish" : "Узнать больше"}</span></Link>
+                            </div>
+                        </div>
+                        <div className="direction__foundation-detail">
+                            <div className="direction__foundation-detail-items">
+                                {foundation[0].map((item) => {
+                                    return (
+                                        <div className="direction__foundation-detail-item" key={item.id}>
+                                            <div className="direction__foundation-detail-item-num">
+                                                <span className="direction__foundation-detail-item-nums">
+                                                    {item.id}
+                                                </span>
+                                                <span className="direction__foundation-detail-item-content">
+                                                    {lang === "uz" ? item.name_uz : item.name_ru}
+                                                </span>
+                                            </div>
+                                            <div className="direction__foundation-detail-item-text">
+                                                {item.child.map((el) => {
+                                                    return (
+                                                        <span className="direction__foundation-detail-item-span text-item" key={el.id}><i className="fa fa-arrow-right" aria-hidden="true"></i>{lang === "uz" ? el?.detail_item_uz : "\n" +
+                                                            el?.detail_item_ru}</span>
+                                                    )
+                                                })}
+                                            </div>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         </div>
                     </div>

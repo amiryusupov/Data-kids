@@ -29,19 +29,14 @@ export let data = [
         },
         {
             id:5,
-            name_uz: "Video montaj | 3 oy",
-            name_ru: "Монтаж видео | 3 месяца"
+            name_uz: "Web dasturlash | 4 oy",
+            name_ru: "Веб программирование | 4 месяца"
         },
     ],
     // 3
     [
         {
             id:6,
-            name_uz: "Web dasturlash | 4 oy",
-            name_ru: "Веб программирование | 4 месяца"
-        },
-        {
-            id:7,
             name_uz: "Android dasturlash | 3 oy",
             name_ru: "Андроид-программирование | 3 месяца"
         }
@@ -415,4 +410,58 @@ export let web2 = [
         desc_uz: "Dasturlash mantiqiy fikrlashga ma'lumotlarni tizimlashga asosiysi jamoa bo'lib ishlashga ko'nikib hamda o'rganib boradi. O'quvchi har bir dars oxirida o'tilgan mavzuga oid kichkina va qiziqarli bo'lgan kichkina sahifaga yasash orqali mavzuni mustahkamlaydi. Darsda raqobat va mulohaza orqali o'z o'zini fikrlash va ko'rsata olish darajasini oshiradi.",
         desc_ru: "Программирование приучает и обучает логическому мышлению, систематизации информации, командной работе. Ученик укрепляет свою тему, делая ее маленькой и интересной страницей, посвященной теме, упомянутой в конце каждого урока. Повышает уровень умения мыслить и проявлять себя на уроке посредством соревнования и рассуждений.",
     },
+];
+export let foundation = [
+    // 0
+    [
+        {
+            id: 1,
+            name_uz: "1 - bosqich | 1 oy",
+            name_ru: "1 - этап | 1 месяц",
+            child : [
+                {
+                    id:1,
+                    detail_item_uz: "Kompyuterning klaviatura buyruklari va qidiruv tizimdan foydalanish",
+                    detail_item_ru: "Использование команд клавиатуры компьютера и поисковой системы",
+                },
+                {
+                    id:2,
+                    detail_item_uz: "Brauzerlardan xavfsiz foydalanish",
+                    detail_item_ru: "Безопасное использование браузеров",
+                },
+                {
+                    id:3,
+                    detail_item_uz: "Windows operatsion tizimini qayta o'rnatish",
+                    detail_item_ru: "Переустановите операционную систему Windows",
+                }
+            ]
+        },
+        {
+            id: 2,
+            name_uz: "2 - bosqich | 1 oy",
+            name_ru: "2 - этап | 1 месяц",
+            child: [
+                {
+                    id:1,
+                    detail_item_uz: "Microsoft Word dasturi bilan tanishish",
+                    detail_item_ru: "Знакомство с Microsoft Word.",
+                },
+                {
+                    id:2,
+                    detail_item_uz: "Klaviaturaning asosiy tugmachalarini o'rgatish",
+                    detail_item_ru: "Обучение основным клавишам клавиатуры",
+                },
+                {
+                    id:3,
+                    detail_item_uz: "Diagrammalar hosil qilish. PDF hujjat ko'rinishida saqlash",
+                    detail_item_ru: "Создание диаграмм. Сохранить как PDF-документ",
+                },
+                {
+                    id:4,
+                    detail_item_uz: "Microsoft Excel dasturida shakkilar va diagrammalar bilan ishlash",
+                    detail_item_ru: "Работа с формами и диаграммами в Microsoft Excel",
+                }
+            ]
+        },
+    ],
 ]

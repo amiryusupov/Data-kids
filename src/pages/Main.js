@@ -1,10 +1,6 @@
 import React, {useRef} from 'react';
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-// import "swiper/components/effect-coverflow/effect-coverflow.min.css";
-// import "swiper/components/autoplay";
-// import "swiper/components/keyboard";
-// import "swiper/swiper.min.css"
 import "swiper/swiper-bundle.min.css"
 import "swiper/components/navigation/navigation.min.css"
 import "swiper/components/pagination/pagination.min.css"
@@ -13,7 +9,7 @@ import {data, foundation} from "../helpers/data";
 import {item} from "../helpers/data";
 import {swiper} from "../helpers/swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {Navigation, Pagination, Scrollbar, Thumbs} from 'swiper';
+import {Navigation, Pagination, Thumbs} from 'swiper';
 import SwiperCore from "swiper/core"
 
 const token = "5321465933:AAF-ZbTKHdQCiH0HbCBiS75clC9cVR5fBeQ"
@@ -25,7 +21,6 @@ function Main() {
     const text = useRef(null)
     const _name = useRef(null)
     const num = useRef(null)
-    // let my_text = `F.I.O: ${_name} %0A Telefon raqam: ${num} %0A Xabar: ${text}`
     const submitMessage = (event) => {
         const API = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=F.I.O: ${_name.current.value}%0ATelefon-raqam: ${num.current.value}%0AXabar: ${text.current.value}`
         fetch(API, {

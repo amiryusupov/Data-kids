@@ -1,11 +1,46 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
+// import "swiper/components/effect-coverflow/effect-coverflow.min.css";
+// import "swiper/components/autoplay";
+// import "swiper/components/keyboard";
+// import "swiper/swiper.min.css"
+import "swiper/swiper-bundle.min.css"
+import "swiper/components/navigation/navigation.min.css"
+import "swiper/components/pagination/pagination.min.css"
 import {images} from "../helpers/images";
 import {data, foundation} from "../helpers/data";
 import {item} from "../helpers/data";
+import {swiper} from "../helpers/swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {Navigation, Pagination, Scrollbar, Thumbs} from 'swiper';
+import SwiperCore from "swiper/core"
+
+const token = "5321465933:AAF-ZbTKHdQCiH0HbCBiS75clC9cVR5fBeQ"
+const chatId = "-745023484"
+
 function Main() {
     let lang = useSelector(state => state.lang.lang)
+
+    const text = useRef(null)
+    const _name = useRef(null)
+    const num = useRef(null)
+    // let my_text = `F.I.O: ${_name} %0A Telefon raqam: ${num} %0A Xabar: ${text}`
+    const submitMessage = (event) => {
+        const API = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=F.I.O: ${_name.current.value}%0ATelefon-raqam: ${num.current.value}%0AXabar: ${text.current.value}`
+        fetch(API, {
+            method: "POST"
+        })
+            .then(success => {
+                alert("Xabaringiz muvaffaqiyatli yuborildi!")
+            }, error => {
+                alert("Xabaringiz yuborilmadi!")
+                console.log(error)
+            })
+    }
+
+    SwiperCore.use([Navigation])
+    SwiperCore.use([Pagination])
     return (
         <>
             <div className="main" id="main">
@@ -101,7 +136,7 @@ function Main() {
                     <span className="direction-title">
                         {lang === "uz" ? "Yo'nalishlar" : "Направления"}
                     </span>
-                    <div className="direction__robot">
+                    <div id="robot" className="direction__robot">
                         <div className="direction__robot-course">
                             <div className="direction__robot-texts">
                                 <span className="direction__robot-title">{lang === "uz" ? "Robototexnika" : "Робототехника"}</span>
@@ -196,7 +231,7 @@ function Main() {
                             </div>
                         </div>
                     </div>
-                    <div className="direction__game">
+                    <div id="game" className="direction__game">
                         <div className="direction__game-text">
                             <div className="direction__game-text-content">
                                 <span className="direction__game-title">{lang === "uz" ? "Mobil o'yin yaratish" : "Создание мобильных игр"}</span>
@@ -241,7 +276,7 @@ function Main() {
                             </div>
                         </div>
                     </div>
-                    <div className="direction__web">
+                    <div id="web" className="direction__web">
                         <div className="direction__web-text">
                             <span className="direction__web-title">
                                 {lang === "uz" ? "Web dasturlash" : "Веб-программирование"}
@@ -334,7 +369,7 @@ function Main() {
                             </div>
                         </div>
                     </div>
-                    <div className="direction__foundation">
+                    <div id="foundation" className="direction__foundation">
                         <div className="direction__foundation-course">
                             <div className="direction__foundation-texts">
                                 <span className="direction__foundation-title">{lang === "uz" ? "Kompyuter savodxonligi" : "Компьютерная грамотность"}</span>
@@ -426,6 +461,44 @@ function Main() {
                     </div>
                 </div>
             </div>
+            <div className="swiper" id="images">
+                <div className="container">
+                    <span className="swiper-title">{lang === "uz" ? "Rasmlar" : "Фотографии"}</span>
+                </div>
+                <Swiper
+                    Loop={true}
+                    modules={[Navigation, Pagination, Thumbs]}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={2}
+                    initialSlide={1}
+                    spaceBetween={5}
+                    navigation={true}
+                    pagination={{clickable: true}}
+                    breakpoints={{
+                        // when window width is >= 768px
+                        378: {
+                            slidesPerView: 1,
+                        },
+                        800:{
+                            slidesPerView: 2,
+                        },
+                        1230: {
+                            slidesPerView: 3,
+                        }
+                    }}
+                >
+                    {
+                        swiper.map((item) => {
+                            return (
+                                    <SwiperSlide key={item.id} className="swiper-img">
+                                        <img src={item.image} alt=""/>
+                                    </SwiperSlide>
+                            )
+                        } )
+                    }
+                </Swiper>
+            </div>
             <div className="map">
                 <div className="container">
                     <span className="map-title">
@@ -460,6 +533,41 @@ function Main() {
                             <Link to={{ pathname: "https://www.instagram.com/data_learning_centre/" }} target="_blank"><img src={images.instagram_img} className="map-card-icon" alt="Instagram"/></Link>
                             <Link to={{ pathname: "https://facebook.com/" }} target="_blank"><img src={images.facebook_img} className="map-card-icon" alt="Facebook"/></Link>
                             <Link to={{ pathname: "https://www.youtube.com/channel/UCiW3qlI3WWth77AeudQgVGw?view_as=subscriber/" }} target="_blank"><img src={images.youtube_img} className="map-card-icon" alt="Youtube"/></Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="contact" id="contact">
+                <div className="container">
+                    <div className="form">
+                        <div className="contact-form">
+                            <div className="text">{lang === "uz" ? "Savollar bormi?" : "Есть вопросы?"}</div>
+                            <form action="#">
+                                <div className="form-row">
+                                    <div className="input-data">
+                                        <input type="text" ref={_name} id="first_name" required/>
+                                        <div className="underline"></div>
+                                        <label htmlFor="">{lang === "uz" ? "F.I.O" : "Ф.И.О"}</label>
+                                    </div>
+                                    <div className="input-data">
+                                        <input ref={num} type="number" id="last_name" required/>
+                                        <div className="underline"></div>
+                                        <label htmlFor="">{lang === "uz" ? "Telefon raqamingiz:" : "Номер телефона:"}</label>
+                                    </div>
+                                </div>
+                                <div className="form-row">
+                                    <div className="input-data textarea">
+                                        <textarea ref={text} rows="8" cols="80" required></textarea>
+                                        <br/>
+                                        <div className="underline"></div>
+                                        <label htmlFor="">{lang === "uz" ? "Xabaringizni yozing" : "Напишите свое сообщение"}</label>
+                                        <br/>
+                                        <div className="submit-btn">
+                                            <button className="button" onClick={submitMessage}><span>{lang === "uz" ? "Yuborish" : "Отправить"}</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

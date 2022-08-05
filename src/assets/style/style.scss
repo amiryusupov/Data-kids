@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 ul li {
     list-style: none;
@@ -3479,6 +3480,33 @@ html {
     }
 }
 // web - end
+// swiper - start
+.swiper {
+    margin-top: 15px;
+    &-title {
+        font-family: $main-font;
+        font-size: 60px;
+        font-weight: 600;
+        color: $black-color;
+        @media screen and (max-width: 500px) {
+            font-size: 40px;
+        }
+    }
+}
+.swiper-img {
+    width: 100%;
+    @include d-flex(center, center, row, unset);
+    img {
+        width: 400px !important;
+        height: 250px;
+        object-fit: cover;
+    @media screen  and (max-width: 1000px) {
+        width: 300px;
+    }
+    }
+}
+// swiper - end
+
 // foundation - start
 .foundation__row {
     @include d-flex(center, center, row, unset);
@@ -3622,3 +3650,126 @@ html {
     }
 }
 // foundation - end
+.contact {
+    width: 100%;
+    @include d-flex(center, center, unset, unset);
+    min-height: auto;
+    padding: 40px;
+    .form {
+        width: 100%;
+        @include d-flex(center, center, column, unset);
+
+        .contact-form {
+            background: $white-color;
+            padding: 15px 20px 70px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+            .text{
+                text-align: center;
+                font-size: 35px;
+                font-family: $main-font;
+                font-weight: 600;
+                color: $black-color;
+            }
+            form{
+                padding: 30px 0 0 0;
+
+                .form-row{
+                    display: flex;
+                    margin: 32px 0;
+
+                    .input-data{
+                        width: 100%;
+                        height: 40px;
+                        margin: 0 20px;
+                        position: relative;
+                    }
+                    .textarea{
+                        height: 70px;
+                    }
+                    .input-data input,
+                    .textarea textarea{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                        font-size: 17px;
+                        border-bottom: 2px solid rgba(0,0,0, 0.12);
+                    }
+                    .input-data input:focus ~ label, .textarea textarea:focus ~ label,
+                    .input-data input:valid ~ label, .textarea textarea:valid ~ label{
+                        transform: translateY(-30px);
+                        font-size: 14px;
+                        color: $course__item_div-num;
+                    }
+                    .textarea textarea{
+                        resize: none;
+                        padding-top: 10px;
+                    }
+                    .input-data label{
+                        position: absolute;
+                        pointer-events: none;
+                        bottom: 10px;
+                        font-size: 16px;
+                        font-family: $main-font;
+                        transition: all 0.3s ease;
+                    }
+                    .textarea label{
+                        width: 100%;
+                        bottom: 40px;
+                        font-family: $main-font;
+                        background: $white-color;
+                    }
+                    .input-data .underline{
+                        position: absolute;
+                        bottom: 0;
+                        height: 2px;
+                        width: 100%;
+                    }
+                    .input-data .underline:before{
+                        position: absolute;
+                        content: "";
+                        height: 2px;
+                        width: 100%;
+                        background: $course__item_div-num;
+                        transform: scaleX(0);
+                        transform-origin: center;
+                        transition: transform 0.3s ease;
+                    }
+                    .input-data input:focus ~ .underline:before,
+                    .input-data input:valid ~ .underline:before,
+                    .textarea textarea:focus ~ .underline:before,
+                    .textarea textarea:valid ~ .underline:before{
+                        transform: scale(1);
+                    }
+                }
+            }
+            .submit-btn {
+                .input-data {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .container {
+        form {
+            padding: 10px 0 0 0;
+
+            .form-row{
+                display: block;
+
+                .input-data{
+                    margin: 35px 0!important;
+                }
+            }
+        }
+        .text {
+            font-size: 30px;
+        }
+    }
+    .submit-btn .input-data{
+        width: 40%!important;
+    }
+}

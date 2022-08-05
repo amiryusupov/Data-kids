@@ -1,5 +1,5 @@
 import React, {useState , useEffect} from 'react'
-import {Link} from "react-router-dom";
+import {HashRouter, Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {setLang} from "../redux/reducers/LangReducer";
 
@@ -25,6 +25,8 @@ function Navbar() {
     }
   };
   useEffect(() => {
+
+
     window.addEventListener("scroll", handleScroll);
     return () => window.addEventListener("scroll", handleScroll);
   });
@@ -68,34 +70,26 @@ function Navbar() {
           <div className="navbar__nav-row">
             <ul className="navbar__nav-ul">
               <li className="navbar__nav-li">
-                <Link to="#main" className="navbar__nav-text">
+                <a href="/#main" className="navbar__nav-text">
                   {lang === "uz" ? "Kirish" : "Введение"}
-                </Link>
-              </li>
-              <li className="navbar__nav-li">
-                <a href="#yo'nalishlar" className="navbar__nav-text">
-                  {lang === "uz" ? "Yo'nalishlar" : "Направления"}
                 </a>
               </li>
               <li className="navbar__nav-li">
-                <Link className="navbar__nav-text">
-                  {lang === "uz" ? "Jamoa" : "Команда"}
-                </Link>
+                {/*<HashRouter hashType="noslash" basename="/" className="navbar__nav-text">*/}
+                {/*</HashRouter>*/}
+                  <a href="/#yo'nalishlar" className="navbar__nav-text">
+                    {lang === "uz" ? "Yo'nalishlar" : "Направления"}
+                  </a>
               </li>
               <li className="navbar__nav-li">
-                <Link className="navbar__nav-text">
+                <a href="/#images" className="navbar__nav-text">
                   {lang === "uz" ? "Rasmlar" : "Галерея"}
-                </Link>
+                </a>
               </li>
               <li className="navbar__nav-li">
-                <Link className="navbar__nav-text">
-                  {lang === "uz" ? "Tarix" : "История"}
-                </Link>
-              </li>
-              <li className="navbar__nav-li">
-                <Link className="navbar__nav-text">
+                <a href="/#contact" className="navbar__nav-text">
                   {lang === "uz" ? "Aloqa" : "Вызов"}
-                </Link>
+                </a>
               </li>
             </ul>
              <div className="navbar__lang">

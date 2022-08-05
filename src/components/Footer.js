@@ -19,21 +19,25 @@ function Footer() {
                     id: 1,
                     name_uz: "Kirish",
                     name_ru: "Введение",
+                    link: "#main"
                 },
                 {
                     id: 2,
                     name_uz: "Yo'nalishlar",
                     name_ru: "Направления",
+                    link: "#course"
                 },
                 {
                     id: 3,
-                    name_uz: "Biz haqimizda",
-                    name_ru: "О нас",
+                    name_uz: "Rasmlar",
+                    name_ru: "Рисунки",
+                    link: "#images"
                 },
                 {
                     id: 4,
                     name_uz: "Aloqa",
                     name_ru: "Вызов",
+                    link: "#contact"
                 },
             ]
         },
@@ -46,25 +50,25 @@ function Footer() {
                     id: 1,
                     name_uz: "Robototexnika",
                     name_ru: "Робототехника",
+                    link: "#robot"
                 },
                 {
                     id: 2,
-                    name_uz: "Scratch",
-                    name_ru: "Scratch",
+                    name_uz: "Kompyuter savodxonligi",
+                    name_ru: "Компьютерная грамотность",
+                    link: "#foundation"
                 },
                 {
                     id: 3,
                     name_uz: "Mobil o'yin yaratish",
                     name_ru: "Создание мобильных игр",
+                    link: "#game"
                 },
                 {
                     id: 4,
                     name_uz: "Web dasturlash",
                     name_ru: "Веб-программирование",
-                },
-                {
-                    name_uz: "Android dasturlash",
-                    name_ru: "Андроид-программирование",
+                    link: "#web"
                 },
             ],
         },
@@ -77,21 +81,25 @@ function Footer() {
                     id: 1,
                     name_uz: "Data learning centre",
                     name_ru: "Data learning centre",
+                    link: "https://www.instagram.com/data_learning_centre/"
                 },
                 {
                     id: 2,
                     name_uz: "Data kids",
                     name_ru: "Data kids",
+                    link: "https://www.instagram.com/data_kids_/"
                 },
                 {
                     id: 3,
                     name_uz: "Data language centre",
                     name_ru: "Data language centre",
+                    link: "https://www.instagram.com/data_language_centre/"
                 },
                 {
                     id: 4,
                     name_uz: "Data soft",
                     name_ru: "Data soft",
+                    link: "https://www.instagram.com/datasoft.uz/"
                 },
             ],
         },
@@ -115,7 +123,7 @@ function Footer() {
                                         <span className="footer__top-title">{lang === "uz" ? item.title_uz : item.title_ru}</span>
                                         {item.child.map((el) => {
                                             return (
-                                                <span className="footer__top-span" key={el.id}>{lang === "uz" ? el.name_uz : el.name_ru}</span>
+                                                <a href={el.link} className="footer__top-span" key={el.id}>{lang === "uz" ? el.name_uz : el.name_ru}</a>
                                             )
                                         })}
                                     </div>

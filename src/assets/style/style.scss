@@ -829,6 +829,7 @@ html {
                             }
                             @media screen and (max-width: 460px) {
                                 font-size: 21px;
+                                padding: 7px 15px;
                             }
                         }
                         .direction__scratch-detail-content {
@@ -1014,6 +1015,7 @@ html {
                             }
                             @media screen and (max-width: 460px) {
                                 font-size: 21px;
+                                padding: 7px 15px;
                             }
                         }
                         .direction__game-detail-content-title {
@@ -1162,6 +1164,7 @@ html {
                     }
                     @media screen and (max-width: 460px) {
                         font-size: 21px;
+                        padding: 7px 15px;
                     }
                 }
                 .direction__web-detail-text {
@@ -1337,8 +1340,11 @@ html {
                 font-size: 30px;
                 color: $black-color;
                 margin: 5px 0 10px;
-                @media screen and (max-width: 1000px) {
+                @media screen and (min-width: 390px) and (max-width: 1000px) {
                     font-size: 28px;
+                }
+                @media screen and (max-width: 390px) {
+                    font-size: 25px;
                 }
             }
             .direction__android-desc {
@@ -1347,7 +1353,7 @@ html {
                 font-size: 16px;
                 color: $black-color;
                 @media screen and (max-width: 390px) {
-                    font-size: 15px;
+                    font-size: 14px;
                 }
             }
         }
@@ -1371,6 +1377,7 @@ html {
                     }
                     @media screen and (max-width: 460px) {
                         font-size: 21px;
+                        padding: 7px 15px;
                     }
                 }
                 .direction__android-text-detail-text {
@@ -1687,9 +1694,11 @@ html {
                 @media screen and (min-width: 390px) and (max-width: 1000px) {
                     font-size: 34px;
                 }
+                @media screen and (max-width: 500px) {
+                    margin-left: 0;
+                }
                 @media screen and (min-width: 300px) and (max-width: 390px) {
                     font-size: 32px;
-                    margin-left: 0;
                 }
                 @media screen and (max-width: 300px) {
                     font-size: 30px;
@@ -3653,6 +3662,9 @@ html {
     @include d-flex(center, center, unset, unset);
     min-height: auto;
     padding: 40px;
+    @media screen and(max-width: 500px) {
+        padding: 20px 0;
+    }
     .form {
         width: 100%;
         @include d-flex(center, center, column, unset);

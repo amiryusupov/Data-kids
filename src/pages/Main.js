@@ -476,7 +476,7 @@ function Main() {
                         1: {
                             slidesPerView: 1,
                         },
-                        378:{
+                        625:{
                             slidesPerView: 2,
                         },
                         1230: {

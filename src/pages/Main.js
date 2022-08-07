@@ -22,6 +22,7 @@ function Main() {
     const _name = useRef(null)
     const num = useRef(null)
     const submitMessage = (event) => {
+        event.preventDefault()
         const API = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=F.I.O: ${_name.current.value}%0ATelefon-raqam: ${num.current.value}%0AXabar: ${text.current.value}`
         fetch(API, {
             method: "POST"
@@ -407,7 +408,7 @@ function Main() {
                     <div className="detail__row">
                         <div className="detail__text">
                             <div className="detail__text-title">
-                                <span>Nega aynan biz?</span>
+                                <span>{lang === "uz" ? "Nega aynan biz?" : "Почему именно мы?"}</span>
                             </div>
                             <div className="detail__text-desc">
                                 <div className="detail__text-desc-row">
@@ -424,7 +425,7 @@ function Main() {
                                 </div>
                                 <div className="detail__text-desc-row">
                                     <img src={images.detail__img4} alt=""/>
-                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar haftada <span className="detail__text-desc-red">3 kun, 3 soatdan</span></span> : <span>Занятия <span className="detail__text-desc-red">3 дня по 3 часа</span>в неделю</span>};</span>
+                                    <span className="detail__text-desc-content">{lang === "uz" ? <span>Darslar haftada <span className="detail__text-desc-red">3 kun, 3 soatdan</span></span> : <span>Занятия <span className="detail__text-desc-red">3 дня по 3 часа </span>в неделю</span>};</span>
                                 </div>
                                 <div className="detail__text-desc-row" >
                                     <img src={images.detail__img5} alt=""/>
@@ -472,10 +473,10 @@ function Main() {
                     pagination={{clickable: true}}
                     breakpoints={{
                         // when window width is >= 768px
-                        378: {
+                        1: {
                             slidesPerView: 1,
                         },
-                        800:{
+                        378:{
                             slidesPerView: 2,
                         },
                         1230: {
@@ -537,7 +538,7 @@ function Main() {
                     <div className="form">
                         <div className="contact-form">
                             <div className="text">{lang === "uz" ? "Savollar bormi?" : "Есть вопросы?"}</div>
-                            <form action="#">
+                            <form onSubmit={submitMessage}>
                                 <div className="form-row">
                                     <div className="input-data">
                                         <input type="text" ref={_name} id="first_name" required/>
@@ -558,7 +559,7 @@ function Main() {
                                         <label htmlFor="">{lang === "uz" ? "Xabaringizni yozing" : "Напишите свое сообщение"}</label>
                                         <br/>
                                         <div className="submit-btn">
-                                            <button className="button" onClick={submitMessage}><span>{lang === "uz" ? "Yuborish" : "Отправить"}</span></button>
+                                            <button className="button"><span>{lang === "uz" ? "Yuborish" : "Отправить"}</span></button>
                                         </div>
                                     </div>
                                 </div>

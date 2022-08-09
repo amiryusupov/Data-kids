@@ -127,7 +127,7 @@ function Main() {
                     </div>
                 </div>
             </div>
-            <div className="direction"  id="yo'nalishlar">
+            <div className="direction"  id="course">
                 <div className="container">
                     <span className="direction-title">
                         {lang === "uz" ? "Yo'nalishlar" : "Направления"}
@@ -476,7 +476,7 @@ function Main() {
                         1: {
                             slidesPerView: 1,
                         },
-                        625:{
+                        625 :{
                             slidesPerView: 2,
                         },
                         1230: {

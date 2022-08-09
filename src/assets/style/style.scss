@@ -788,7 +788,7 @@ html {
                 font-weight: 600;
                 font-size: 70px;
                 @media screen and (max-width: 390px) {
-                    font-size: 60px;
+                    font-size: 50px;
                 }
             }
             &-texts {
@@ -1545,10 +1545,7 @@ html {
                 @media screen and (min-width: 390px) and (max-width: 500px) {
                     font-size: 50px;
                 }
-                @media screen and (min-width: 320px) and (max-width: 390px) {
-                    font-size: 40px;
-                }
-                @media screen and (max-width: 320px) {
+                @media screen and (max-width: 390px) {
                     font-size: 35px;
                 }
             }
@@ -3758,6 +3755,9 @@ html {
                     .textarea textarea:focus ~ .underline:before,
                     .textarea textarea:valid ~ .underline:before{
                         transform: scale(1);
+                    }
+                    .textarea textarea {
+                        font-family: $main-font;
                     }
                 }
             }

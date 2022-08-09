@@ -19,25 +19,25 @@ function Footer() {
                     id: 1,
                     name_uz: "Kirish",
                     name_ru: "Введение",
-                    link: "#main"
+                    link: "/#main"
                 },
                 {
                     id: 2,
                     name_uz: "Yo'nalishlar",
                     name_ru: "Направления",
-                    link: "#course"
+                    link: "/#course"
                 },
                 {
                     id: 3,
                     name_uz: "Rasmlar",
                     name_ru: "Рисунки",
-                    link: "#images"
+                    link: "/#images"
                 },
                 {
                     id: 4,
                     name_uz: "Aloqa",
                     name_ru: "Вызов",
-                    link: "#contact"
+                    link: "/#contact"
                 },
             ]
         },
@@ -50,25 +50,25 @@ function Footer() {
                     id: 1,
                     name_uz: "Robototexnika",
                     name_ru: "Робототехника",
-                    link: "#robot"
+                    link: "/#robot"
                 },
                 {
                     id: 2,
                     name_uz: "Kompyuter savodxonligi",
                     name_ru: "Компьютерная грамотность",
-                    link: "#foundation"
+                    link: "/#foundation"
                 },
                 {
                     id: 3,
                     name_uz: "Mobil o'yin yaratish",
                     name_ru: "Создание мобильных игр",
-                    link: "#game"
+                    link: "/#game"
                 },
                 {
                     id: 4,
                     name_uz: "Web dasturlash",
                     name_ru: "Веб-программирование",
-                    link: "#web"
+                    link: "/#web"
                 },
             ],
         },

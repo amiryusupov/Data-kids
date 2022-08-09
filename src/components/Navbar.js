@@ -75,9 +75,7 @@ function Navbar() {
                 </a>
               </li>
               <li className="navbar__nav-li">
-                {/*<HashRouter hashType="noslash" basename="/" className="navbar__nav-text">*/}
-                {/*</HashRouter>*/}
-                  <a href="/#yo'nalishlar" className="navbar__nav-text">
+                  <a href="/#course" className="navbar__nav-text">
                     {lang === "uz" ? "Yo'nalishlar" : "Направления"}
                   </a>
               </li>
